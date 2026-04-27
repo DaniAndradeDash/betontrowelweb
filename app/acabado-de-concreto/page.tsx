@@ -5,21 +5,25 @@ const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q
 export default function AcabadoPage() {
   const products = [
     { 
-      name: "Allanadora de Poder 24\"", 
+      id: 1,
+      name: "Allanadora sencilla de 24\"", 
       desc: "Ideal para acabados lisos en superficies medianas. Motor eficiente y alta durabilidad.",
       img: MAIN_IMG 
     },
     { 
+      id: 2,
       name: "Hélice de Concreto Industrial", 
       desc: "Diseñada para el nivelado preciso de losas de concreto de alta resistencia.",
       img: MAIN_IMG 
     },
     { 
+      id: 3,
       name: "Allanadora de Poder 36\"", 
       desc: "Máxima eficiencia para grandes extensiones de concreto industrial.",
       img: MAIN_IMG 
     },
     { 
+      id: 4,
       name: "Kit de Aspas Profesionales", 
       desc: "Accesorios de acero templado para diferentes tipos de acabado.",
       img: MAIN_IMG 
@@ -40,8 +44,8 @@ export default function AcabadoPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Acabado de <span className="text-brand-blue">Concreto</span></h1>
-          <p className="text-xl text-gray-300 max-w-2xl">
-            Obtenga superficies perfectamente niveladas y lisas con nuestra gama de allanadoras y equipo de acabado profesional.
+          <p className="text-md text-gray-300 max-w-2xl">
+            BETON TROWEL NV se complace en presentarle nuestra amplia gama de equipos de compactación y acabado de hormigón. No comprometemos la calidad utilizando materiales de alta calidad combinados con piezas de ingeniería de precisión para garantizar que su inversión en nuestros equipos le brinde una vida útil sin problemas y el máximo rendimiento de su capital.
           </p>
         </div>
       </section>
@@ -49,6 +53,7 @@ export default function AcabadoPage() {
       {/* Products Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl font-bold text-center text-brand-blue mb-18">Nuestras máquinas</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {products.map((p, i) => (
               <div key={i} className="group border border-brand-grey rounded-2xl overflow-hidden hover:shadow-2xl transition-all">

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+// Importamos desde FontAwesome (fa) dentro de react-icons
+import { FaInstagram, FaFacebookF } from "react-icons/fa6";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -13,7 +15,8 @@ const navLinks = [
   { name: "Contacto", href: "/contacto" },
 ];
 
-const RELIABLE_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
+
+const BETON_TROWEL_IMG = "/logos/BETON-TROWEL-LOGO-SITE-ICON.png";
 
 export default function Footer() {
   const [year, setYear] = useState<number>(0);
@@ -30,11 +33,11 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-4 mb-4">
                <Image 
-                src={RELIABLE_IMG} 
+                src={BETON_TROWEL_IMG} 
                 alt="Beton Trowel Logo" 
                 width={120} 
                 height={40} 
-                className="h-10 w-auto object-contain brightness-0 invert"
+                className="h-28 w-auto object-contain "
               />
             </div>
             <p className="text-gray-400 text-sm max-w-md">
@@ -60,14 +63,34 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info con Redes Sociales */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
               <li>Email: info@betontrowel.mx</li>
               <li>Tel: +52 (55) 1234 5678</li>
               <li>México</li>
             </ul>
+
+            {/* Contenedor de iconos modernos */}
+            <div className="flex gap-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-2.5 rounded-full bg-gray-800/50 text-gray-400 hover:bg-[#1877F2] hover:text-white hover:-translate-y-1.5 transition-all duration-300 shadow-lg"
+              >
+                <FaFacebookF size={18} />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-2.5 rounded-full bg-gray-800/50 text-gray-400 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:-translate-y-1.5 transition-all duration-300 shadow-lg"
+              >
+                <FaInstagram size={18} />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -77,8 +100,8 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <Image 
-              src={RELIABLE_IMG} 
-              alt="Equipos y Superficies Logo" 
+              src={BETON_TROWEL_IMG} 
+              alt="Beton Trowel Logo" 
               width={140} 
               height={40} 
               className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
