@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
 
@@ -68,9 +69,12 @@ export default function AcabadoPage() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-brand-black mb-2">{p.name}</h3>
                   <p className="text-gray-600 mb-6">{p.desc}</p>
-                  <button className="w-full py-3 border border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors">
-                    Solicitar Información
-                  </button>
+                  <Link
+                    href={`/acabado-de-concreto/${p.id}`}
+                    className="w-full py-3 border border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors"
+                  >
+                    Consultar Máquina
+                  </Link>
                 </div>
               </div>
             ))}

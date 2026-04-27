@@ -89,18 +89,18 @@ export default function HomePage() {
                 de ingeniería de precisión para garantizar que su inversión brinde una vida útil sin problemas.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <Link
-                  href="/contacto"
-                  className="bg-brand-blue text-white px-10 py-4 rounded-full font-bold hover:shadow-lg transition-all"
-                >
-                  Más Información {/*Aqui va enlace a equipos y superficies */}
-                </Link>
-                <Link
-                  href="/galeria"
-                  className="border-2 border-brand-blue text-brand-blue px-10 py-4 rounded-full font-bold hover:bg-brand-blue hover:text-white transition-all"
-                >
-                  Ver Nuestros equipos {/*Aqui va enlace a galeria */}
-                </Link>
+            <Link
+              href="/acabado-de-concreto/1"
+              className="bg-brand-blue text-white px-10 py-4 rounded-full font-bold hover:shadow-lg transition-all"
+            >
+              Consultar Máquina 1
+            </Link>
+            <Link
+              href="/acabado-de-concreto/2"
+              className="border-2 border-brand-blue text-brand-blue px-10 py-4 rounded-full font-bold hover:bg-brand-blue hover:text-white transition-all"
+            >
+              Consultar Máquina 2
+            </Link>
               </div>
             </div>
           </div>
