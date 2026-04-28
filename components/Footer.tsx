@@ -35,7 +35,7 @@ export default function Footer() {
               alt="Beton Trowel"
               width={160}
               height={50}
-              className="h-16 w-auto object-contain brightness-0 invert"
+              className="h-24 w-auto object-contain"
             />
             <p className="text-gray-400 text-sm md:text-base font-light max-w-sm leading-relaxed">
               Especialistas en maquinaria ligera y herramientas de acabado para la construcción.
