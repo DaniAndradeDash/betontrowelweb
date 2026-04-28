@@ -1,116 +1,128 @@
 import Image from "next/image";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
 
-const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
+const CONTACT_HERO = "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop";
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col">
-      <section className="bg-brand-black text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <Image 
-            src={MAIN_IMG} 
-            alt="Contact" 
-            fill 
-            className="object-cover"
+    <div className="bg-white text-[#171717] font-sans selection:bg-[#00AEEF] selection:text-white">
+
+      {/* Header Sección: Minimalismo con Impacto */}
+      <section className="relative h-[40vh] sm:h-[50vh] flex items-center justify-center overflow-hidden bg-[#1A1A1A]">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A1A]/80 via-[#1A1A1A]/40 to-[#1A1A1A] z-10"></div>
+          <Image
+            src={CONTACT_HERO}
+            alt="Beton Trowel Contact"
+            fill
+            className="object-cover opacity-60 grayscale-[40%]"
+            priority
           />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Contacto</h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Estamos listos para ayudarte a elegir el equipo ideal para tu proyecto. Escríbenos o llámanos.
-          </p>
+        <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
+          <span className="text-[#00AEEF] font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] mb-4 block animate-fade-in">
+            Global Support Network
+          </span>
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-white tracking-tighter leading-[0.9] mb-6">
+            ESTAMOS <br /> <span className="text-[#00AEEF]">CONECTADOS.</span>
+          </h1>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Info */}
-            <div>
-              <h2 className="text-3xl font-bold text-brand-black mb-8">Información de Contacto</h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-brand-blue/10 p-3 rounded-lg text-brand-blue">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
+      {/* Main Contact Section */}
+      <section className="py-20 lg:py-32 px-6">
+        <div className="max-w-[2560px] mx-auto lg:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-24">
+
+            {/* Columna Izquierda: Info de Contacto */}
+            <div className="lg:col-span-5 space-y-12">
+              <div>
+                <h2 className="text-3xl sm:text-5xl font-bold tracking-tighter mb-6 uppercase">
+                  Información <br /> de Contacto
+                </h2>
+                <p className="text-gray-500 font-light max-w-md leading-relaxed">
+                  ¿Necesitas una cotización formal o asesoría técnica sobre nuestros equipos belgas? Nuestro equipo de expertos está listo para responder.
+                </p>
+              </div>
+
+              <div className="space-y-8">
+                {[
+                  { icon: Phone, title: "Teléfono", detail: "+52 (55) 1234 5678" },
+                  { icon: Mail, title: "Correo Electrónico", detail: "info@betontrowel.mx" },
+                  { icon: MapPin, title: "Ubicación", detail: "Ciudad de México, México" },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-6 group">
+                    <div className="p-4 rounded-2xl bg-[#F5F5F5] text-[#1A1A1A] group-hover:bg-[#00AEEF] group-hover:text-white transition-all duration-500 shadow-sm">
+                      <item.icon size={24} strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">{item.title}</h3>
+                      <p className="text-lg font-mono font-medium text-[#1A1A1A]">{item.detail}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-brand-black">Teléfono</h3>
-                    <p className="text-gray-600">+52 (55) 1234 5678</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-brand-blue/10 p-3 rounded-lg text-brand-blue">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-brand-black">Correo Electrónico</h3>
-                    <p className="text-gray-600">info@betontrowel.mx</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-brand-blue/10 p-3 rounded-lg text-brand-blue">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-brand-black">Ubicación</h3>
-                    <p className="text-gray-600">Ciudad de México, México</p>
-                  </div>
-                </div>
+                ))}
+              </div>
+
+              {/* Elemento decorativo / Frase de marca */}
+              <div className="pt-12 border-t border-gray-100 hidden lg:block">
+                <p className="font-mono text-[10px] text-gray-300 uppercase tracking-[0.3em]">
+                  Beton Trowel BV • Calidad Sin Compromisos
+                </p>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-brand-grey p-8 rounded-2xl shadow-lg">
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all"
-                      placeholder="Tu nombre"
+            {/* Columna Derecha: Formulario Estilo Premium */}
+            <div className="lg:col-span-7">
+              <div className="bg-[#F5F5F5] p-8 sm:p-12 rounded-[2.5rem] border border-gray-100 shadow-2xl shadow-gray-200/50 transition-all hover:shadow-none">
+                <form className="space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400 ml-1">Nombre Completo</label>
+                      <input
+                        type="text"
+                        placeholder="Ej. Juan Pérez"
+                        className="w-full bg-white px-6 py-4 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-2 focus:ring-[#00AEEF] outline-none transition-all placeholder:text-gray-300 font-mono text-sm"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400 ml-1">Email Corporativo</label>
+                      <input
+                        type="email"
+                        placeholder="juan@empresa.com"
+                        className="w-full bg-white px-6 py-4 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-2 focus:ring-[#00AEEF] outline-none transition-all placeholder:text-gray-300 font-mono text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400 ml-1">Asunto de Interés</label>
+                    <input
+                      type="text"
+                      placeholder="Ej. Cotización Allanadora de Concreto"
+                      className="w-full bg-white px-6 py-4 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-2 focus:ring-[#00AEEF] outline-none transition-all placeholder:text-gray-300 font-mono text-sm"
                     />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                    <input 
-                      type="email" 
-                      className="w-full px-4 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all"
-                      placeholder="correo@ejemplo.com"
-                    />
+
+                  <div className="space-y-2">
+                    <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400 ml-1">Mensaje o Requerimientos</label>
+                    <textarea
+                      rows={5}
+                      placeholder="Describa brevemente su proyecto o el equipo que requiere..."
+                      className="w-full bg-white px-6 py-4 rounded-2xl border-none ring-1 ring-gray-200 focus:ring-2 focus:ring-[#00AEEF] outline-none transition-all placeholder:text-gray-300 font-mono text-sm resize-none"
+                    ></textarea>
                   </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all"
-                    placeholder="Ej. Cotización de Allanadora"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
-                  <textarea 
-                    rows={4} 
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all"
-                    placeholder="¿En qué podemos ayudarte?"
-                  ></textarea>
-                </div>
-                <button 
-                  type="submit" 
-                  className="w-full bg-brand-blue text-white py-3 rounded-md font-bold hover:bg-blue-600 transition-colors shadow-md"
-                >
-                  Enviar Mensaje
-                </button>
-              </form>
+
+                  <button
+                    type="submit"
+                    className="group w-full bg-[#1A1A1A] text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-[#00AEEF] transition-all duration-500 shadow-xl active:scale-95"
+                  >
+                    <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    ENVIAR SOLICITUD
+                  </button>
+                </form>
+              </div>
             </div>
+
           </div>
         </div>
       </section>

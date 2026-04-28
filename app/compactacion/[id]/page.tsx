@@ -64,15 +64,15 @@ export default async function MachineDetailPage({ params }: PageProps) {
     return (
         <main className="min-h-screen bg-white text-[#171717] font-sans selection:bg-[#00AEEF] selection:text-white">
 
-            {/* Navegación Sutil */}
-            <nav className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
+       {/* Navegación Sutil */}
+       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex justify-between items-center">
                 <Link href="/acabado-de-concreto" className="flex items-center gap-2 text-sm font-medium hover:text-[#00AEEF] transition-colors group">
                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Volver al Catálogo
                 </Link>
                 <span className="font-mono text-[10px] text-gray-400 uppercase tracking-[0.3em]">REF: BT-{id}</span>
             </nav>
 
-            <section className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 pb-20">
+             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 sm:gap-12 lg:gap-16 pb-12 sm:pb-16 lg:pb-20">
                 {/* Lado Izquierdo: Visual */}
                 <div className="space-y-6">
                     <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-[#F5F5F5] border border-gray-100">

@@ -28,7 +28,7 @@ export default function VibracionPage() {
 
   return (
     <div className="flex flex-col">
-      <section className="bg-brand-blue text-white py-20 relative overflow-hidden">
+       <section className="bg-brand-blue text-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image 
             src={MAIN_IMG} 

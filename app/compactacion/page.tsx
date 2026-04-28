@@ -28,7 +28,7 @@ export default function CompactacionPage() {
 
   return (
     <div className="flex flex-col">
-      <section className="bg-brand-black text-white py-20 relative overflow-hidden">
+       <section className="bg-brand-blue text-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <Image 
             src={MAIN_IMG} 
@@ -38,16 +38,17 @@ export default function CompactacionPage() {
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Compactación de <span className="text-brand-blue">Suelos</span></h1>
-          <p className="text-xl text-gray-300 max-w-2xl">
-            Asegure la estabilidad de sus cimientos con la maquinaria de compactación más potente y confiable del mercado.
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Compactación de <span className="text-brand-black">Suelos</span></h1>
+          <p className="text-xl text-white max-w-2xl">
+            Los compactadores de placas BT son reconocidos como el estándar de la industria para compactar suelos granulares y asfalto.
+            Miles de usuarios satisfechos saben que los compactadores de placas BT tienen el máximo rendimiento, fácil manejo, bajo mantenimiento y larga vida útil.  
           </p>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
             {products.map((p, i) => (
               <div key={i} className="group border border-brand-grey rounded-2xl overflow-hidden hover:shadow-2xl transition-all">
                 <div className="aspect-video relative overflow-hidden">
@@ -62,7 +63,7 @@ export default function CompactacionPage() {
                   <h3 className="text-xl font-bold text-brand-black mb-2">{p.name}</h3>
                   <p className="text-gray-600 mb-6">{p.desc}</p>
                   <button className="w-full py-3 border border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors">
-                    Solicitar Información
+                    Ver Información
                   </button>
                 </div>
               </div>

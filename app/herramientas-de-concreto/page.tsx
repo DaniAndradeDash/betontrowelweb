@@ -28,7 +28,7 @@ export default function HerramientasPage() {
 
   return (
     <div className="flex flex-col">
-      <section className="bg-brand-blue text-white py-20 relative overflow-hidden">
+       <section className="bg-brand-blue text-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image 
             src={MAIN_IMG} 
@@ -39,15 +39,15 @@ export default function HerramientasPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Herramientas de <span className="text-brand-black">Concreto</span></h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            La precisión comienza con la herramienta correcta. Ofrecemos equipo manual de grado industrial para cada detalle de tu obra.
+          <p className="text-xl text-white max-w-2xl">
+            Una amplia gama de herramientas para concreto en diferentes etapas de construcción y reparación de concreto, para trabajos planos y acabados manuales de superficies.
           </p>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 lg:gap-10">
             {tools.map((t, i) => (
               <div key={i} className="group border border-brand-grey rounded-2xl overflow-hidden hover:shadow-2xl transition-all">
                 <div className="aspect-video relative overflow-hidden">
