@@ -24,7 +24,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-[#1A1A1A] text-white pt-20 pb-10 border-t border-gray-800">
+    <section className="bg-[#1A1A1A] text-white pt-20 pb-10 border-t border-gray-800">
       <div className="max-w-[2560px] mx-auto px-6 sm:px-12 lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
 
@@ -106,6 +106,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </section>
   );
 }
