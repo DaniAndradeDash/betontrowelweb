@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-// Importamos desde FontAwesome (fa) dentro de react-icons
 import { FaInstagram, FaFacebookF } from "react-icons/fa6";
 
 const navLinks = [
@@ -15,7 +14,6 @@ const navLinks = [
   { name: "Contacto", href: "/contacto" },
 ];
 
-
 const BETON_TROWEL_IMG = "/logos/BETON-TROWEL-LOGO-SITE-ICON.png";
 
 export default function Footer() {
@@ -26,35 +24,34 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-brand-black text-white pt-12 pb-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-[#1A1A1A] text-white pt-20 pb-10 border-t border-gray-800">
+      <div className="max-w-[2560px] mx-auto px-6 sm:px-12 lg:px-24">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-4 mb-4">
-               <Image 
-                src={BETON_TROWEL_IMG} 
-                alt="Beton Trowel Logo" 
-                width={120} 
-                height={40} 
-                className="h-28 w-auto object-contain "
-              />
-            </div>
-            <p className="text-gray-400 text-sm max-w-md">
-              Especialistas en maquinaria ligera y herramientas de acabado para la construcción. 
-              Calidad y eficiencia para tus proyectos de concreto en México.
+          <div className="md:col-span-5 space-y-6">
+            <Image
+              src={BETON_TROWEL_IMG}
+              alt="Beton Trowel"
+              width={160}
+              height={50}
+              className="h-16 w-auto object-contain brightness-0 invert"
+            />
+            <p className="text-gray-400 text-sm md:text-base font-light max-w-sm leading-relaxed">
+              Especialistas en maquinaria ligera y herramientas de acabado para la construcción.
+              Calidad belga y eficiencia para tus proyectos en México.[cite: 5]
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Navegación</h3>
-            <ul className="space-y-2">
+          <div className="md:col-span-3">
+            <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Navegación</h3>
+            <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-brand-blue transition-colors text-sm"
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-[#00AEEF] transition-colors text-sm font-light"
                   >
                     {link.name}
                   </Link>
@@ -63,22 +60,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info con Redes Sociales */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contacto</h3>
-            <ul className="space-y-2 text-sm text-gray-400 mb-6">
-              <li>Email: info@betontrowel.mx</li>
-              <li>Tel: +52 (55) 1234 5678</li>
-              <li>México</li>
+          {/* Contact & Social */}
+          <div className="md:col-span-4">
+            <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Contacto</h3>
+            <ul className="space-y-2 text-sm text-gray-400 mb-8 font-light">
+              <li>Email: info@betontrowel.mx[cite: 5]</li>
+              <li>Tel: +52 (55) 1234 5678[cite: 5]</li>
+              <li>México[cite: 5]</li>
             </ul>
 
-            {/* Contenedor de iconos modernos */}
             <div className="flex gap-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-2.5 rounded-full bg-gray-800/50 text-gray-400 hover:bg-[#1877F2] hover:text-white hover:-translate-y-1.5 transition-all duration-300 shadow-lg"
+                className="group p-3 rounded-full bg-white/5 text-gray-400 hover:bg-[#1877F2] hover:text-white hover:-translate-y-1 transition-all duration-300"
               >
                 <FaFacebookF size={18} />
               </a>
@@ -86,7 +82,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-2.5 rounded-full bg-gray-800/50 text-gray-400 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:-translate-y-1.5 transition-all duration-300 shadow-lg"
+                className="group p-3 rounded-full bg-white/5 text-gray-400 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:-translate-y-1 transition-all duration-300"
               >
                 <FaInstagram size={18} />
               </a>
@@ -94,17 +90,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-xs">
-            © {year || "2026"} Beton Trowel. Todos los derechos reservados.
+        {/* Bottom Bar */}
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-[10px] uppercase tracking-widest">
+            © {year || "2026"} BETON TROWEL. TODOS LOS DERECHOS RESERVADOS.[cite: 5]
           </p>
-          <div className="flex items-center gap-4">
-            <Image 
-              src={BETON_TROWEL_IMG} 
-              alt="Beton Trowel Logo" 
-              width={140} 
-              height={40} 
-              className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+          <div className="flex items-center gap-4 opacity-50 hover:opacity-100 transition-opacity">
+            <Image
+              src={BETON_TROWEL_IMG}
+              alt="Beton Trowel Logo"
+              width={120}
+              height={30}
+              className="h-6 w-auto object-contain brightness-0 invert"
             />
           </div>
         </div>
@@ -112,4 +109,3 @@ export default function Footer() {
     </footer>
   );
 }
-
