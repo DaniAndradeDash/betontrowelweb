@@ -38,9 +38,9 @@ export default function HomePage() {
             </div>
 
             {/* Título Principal con escala fluida para 2K/4K */}
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white tracking-tighter leading-[0.95] mb-8">
-              ESPECIALISTAS EN <br />
-              <span className="text-[#00AEEF]">ACABADO Y COMPACTACIÓN</span>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-5xl 2xl:text-6xl font-bold text-white tracking-tighter leading-[0.95] mb-8">
+              Beton Trowel México, <br />
+              <span className="text-[#00AEEF]">con sede en Monterrey NL Y. SLP</span>
             </h1>
 
             {/* Descripción con ancho controlado */}
