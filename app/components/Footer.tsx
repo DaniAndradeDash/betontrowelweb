@@ -28,8 +28,8 @@ export default function Footer() {
       <div className="max-w-[2560px] mx-auto px-6 sm:px-12 lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
           <div className="md:col-span-5 space-y-6">
-            <Image src={BETON_TROWEL_IMG} alt="Logo" width={160} height={50} className="brightness-0 invert" />
-            <p className="text-gray-400 text-sm font-light leading-relaxed">Especialistas en acabado de concreto.[cite: 5]</p>
+            <Image src={BETON_TROWEL_IMG} alt="Logo" width={160} height={50} />
+            <p className="text-gray-400 text-sm font-light leading-relaxed">Especialistas en acabado de concreto.</p>
           </div>
           <div className="md:col-span-3">
             <h3 className="text-[#00AEEF] font-bold text-xs uppercase mb-8">Navegación</h3>
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-white/5 pt-8 text-[10px] text-gray-500 uppercase tracking-widest text-center md:text-left">
-          © {year || "2026"} BETON TROWEL. TODOS LOS DERECHOS RESERVADOS.[cite: 5]
+          © {year || "2026"} BETON TROWEL. TODOS LOS DERECHOS RESERVADOS.
         </div>
       </div>
     </div>
