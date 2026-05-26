@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Card from "../components/Card";
 
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
 
@@ -57,26 +57,7 @@ export default function AcabadoPage() {
            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-center text-brand-blue mb-8 sm:mb-12 lg:mb-16">Nuestras máquinas</h1>
            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-10">
             {products.map((p, i) => (
-              <div key={i} className="group border border-brand-grey rounded-2xl overflow-hidden hover:shadow-2xl transition-all">
-                <div className="aspect-video relative overflow-hidden">
-                  <Image 
-                    src={p.img} 
-                    alt={p.name} 
-                    fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-brand-black mb-2">{p.name}</h3>
-                  <p className="text-gray-600 mb-6">{p.desc}</p>
-                  <Link
-                    href={`/acabado-de-concreto/${p.id}`}
-                    className="w-full py-3 border border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors"
-                  >
-                    Ver información
-                  </Link>
-                </div>
-              </div>
+              <Card key={p.id} id={p.id} name={p.name} desc={p.desc} img={p.img} />
             ))}
           </div>
         </div>

@@ -4,6 +4,14 @@ import { Phone, Mail, MapPin, Send } from "lucide-react";
 const CONTACT_HERO = "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop";
 
 export default function ContactPage() {
+  const icons = [
+    { icon: Phone, title: "Teléfono San Luis Potosí", detail: "(+52) 444 256 7853" },
+    { icon: Phone, title: "Teléfono Monterrey", detail: "(+52) 81 1018 0615" },
+    { icon: Mail, title: "Correo Electrónico", detail: "c.andrade@equiposysuerpficiesdemexico.com" },
+    { icon: MapPin, title: "Ubicación Monterrey", detail: "Mariano Escobedo 1456-Norte, Treviño, 64570 Monterrey, N.L." },
+    { icon: MapPin, title: "Ubicación San Luis Potosí", detail: "México 57 8245, Villa de Pozos, 79422 Pozos, S.L.P." },
+  ];
+
   return (
     <div className="bg-white text-[#171717] font-sans selection:bg-[#00AEEF] selection:text-white">
 
@@ -21,7 +29,7 @@ export default function ContactPage() {
         </div>
         <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
           <span className="text-[#00AEEF] font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] mb-4 block animate-fade-in">
-            Global Support Network
+            Servicio con <a href="https://equiposysuperficiesdemexico.com" className="font-bold text-white hover:no-underline hover:text-[#00AEEF]">Equipos y superficies de México</a>
           </span>
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-white tracking-tighter leading-[0.9] mb-6">
             ESTAMOS <br /> <span className="text-[#00AEEF]">CONECTADOS.</span>
@@ -30,12 +38,12 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 lg:py-32 px-6">
+      <section className="py-20 lg:py-32 md:py-24 px-6">
         <div className="max-w-[2560px] mx-auto lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 md:gap-8 gap-16 xl:gap-24">
 
             {/* Columna Izquierda: Info de Contacto */}
-            <div className="lg:col-span-5 space-y-12">
+            <div className="md:col-span-4 lg:col-span-5 space-y-12">
               <div>
                 <h2 className="text-3xl sm:text-5xl font-bold tracking-tighter mb-6 uppercase">
                   Información <br /> de Contacto
@@ -46,11 +54,7 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-8">
-                {[
-                  { icon: Phone, title: "Teléfono", detail: "+52 (55) 1234 5678" },
-                  { icon: Mail, title: "Correo Electrónico", detail: "info@betontrowel.mx" },
-                  { icon: MapPin, title: "Ubicación", detail: "Ciudad de México, México" },
-                ].map((item, idx) => (
+                {icons.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-6 group">
                     <div className="p-4 rounded-2xl bg-[#F5F5F5] text-[#1A1A1A] group-hover:bg-[#00AEEF] group-hover:text-white transition-all duration-500 shadow-sm">
                       <item.icon size={24} strokeWidth={1.5} />
@@ -66,13 +70,13 @@ export default function ContactPage() {
               {/* Elemento decorativo / Frase de marca */}
               <div className="pt-12 border-t border-gray-100 hidden lg:block">
                 <p className="font-mono text-[10px] text-gray-300 uppercase tracking-[0.3em]">
-                  Beton Trowel BV • Calidad Sin Compromisos
+                  Beton Trowel • Equipos y Superifcies de México
                 </p>
               </div>
             </div>
 
             {/* Columna Derecha: Formulario Estilo Premium */}
-            <div className="lg:col-span-7">
+            <div className="md:col-span-6 lg:col-span-7">
               <div className="bg-[#F5F5F5] p-8 sm:p-12 rounded-[2.5rem] border border-gray-100 shadow-2xl shadow-gray-200/50 transition-all hover:shadow-none">
                 <form className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
