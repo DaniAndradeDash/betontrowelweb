@@ -4,6 +4,38 @@ import Link from "next/link";
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
 
 export default function HeroAction() {
+    const buttonDisabled = true; // Cambia a false para habilitar el botón
+    const buttonCatalogo = () => {
+        return (
+            <div className="relative group">
+                {buttonDisabled ? (
+                    <button
+                        disabled
+                        className="w-full sm:w-auto bg-white/5 backdrop-blur-xl text-white border border-white/10 px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                        Ver Catálogo
+                    </button>
+                ) : (
+                    <Link
+                        href="/acabado-de-concreto"
+                        className="w-full sm:w-auto bg-white/5 backdrop-blur-xl text-white border border-white/10 px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all flex items-center justify-center"
+                    >
+                        Ver Catálogo
+                    </Link>
+                )}
+
+                {/* Tooltip */}
+                {buttonDisabled && (
+                    <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <span className="absolute -top-10 whitespace-nowrap rounded-xl bg-black/90 px-4 py-2 text-xs text-white shadow-2xl border border-white/10 backdrop-blur-md">
+                            Próximamente disponible
+                        </span>
+                    </div>
+                )}
+            </div>
+        );
+    };
+
     return (
         <>
             {/* Section 1: Hero */}
@@ -21,7 +53,7 @@ export default function HeroAction() {
                     />
                 </div >
 
-                {/* Contenido Principal con Z-Index para estar por encima del fondo */ }
+                {/* Contenido Principal con Z-Index para estar por encima del fondo */}
                 <div className="relative z-20 w-full max-w-[2560px] mx-auto px-6 sm:px-12 lg:px-24">
                     <div className="max-w-4xl 2xl:max-w-6xl">
                         {/* Badge sutil */}
@@ -55,12 +87,7 @@ export default function HeroAction() {
                                 </svg>
                             </Link>
 
-                            <Link
-                                href="/acabado-de-concreto"
-                                className="w-full sm:w-auto bg-white/5 backdrop-blur-xl text-white border border-white/10 px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all flex items-center justify-center"
-                            >
-                                Ver Catálogo
-                            </Link>
+                            {buttonCatalogo()}
                         </div>
                     </div>
                 </div>

@@ -26,10 +26,10 @@ export default function Footer() {
   return (
     <section className="bg-[#1A1A1A] text-white pt-20 pb-10 border-t border-gray-800">
       <div className="max-w-[2560px] mx-auto px-6 sm:px-12 lg:px-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-14">
 
           {/* Company Info */}
-          <div className="md:col-span-5 space-y-6">
+          <div className="md:col-span-4 space-y-6">
             <Image
               src={BETON_TROWEL_IMG}
               alt="Beton Trowel"
@@ -39,12 +39,12 @@ export default function Footer() {
             />
             <p className="text-gray-400 text-sm md:text-base font-light max-w-sm leading-relaxed">
               Especialistas en maquinaria ligera y herramientas de acabado para la construcción.
-              Calidad belga y eficiencia para tus proyectos en México.[cite: 5]
+              Calidad belga y eficiencia para tus proyectos en México.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-4">
             <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Navegación</h3>
             <ul className="space-y-3">
               {navLinks.map((link) => (
@@ -64,9 +64,10 @@ export default function Footer() {
           <div className="md:col-span-4">
             <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Contacto</h3>
             <ul className="space-y-2 text-sm text-gray-400 mb-8 font-light">
-              <li>Email: info@betontrowel.mx[cite: 5]</li>
-              <li>Tel: +52 (55) 1234 5678[cite: 5]</li>
-              <li>México[cite: 5]</li>
+              <li>Email: c.andrade@equiposysuperficiesdemexico.com</li>
+              <li>Telefono San Luis Potosí: +52 444 256 7853</li>
+              <li>Telefono Monterrey: +52 444 256 7853</li>
+              <li>Ubicación: Mariano Escobedo 1456-Norte, Treviño, 64570 Monterrey, N.L.</li>
             </ul>
 
             <div className="flex gap-4">
@@ -93,7 +94,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-[10px] uppercase tracking-widest">
-            © {year || "2026"} BETON TROWEL. TODOS LOS DERECHOS RESERVADOS.[cite: 5]
+            © {year || "2026"} BETON TROWEL. TODOS LOS DERECHOS RESERVADOS.
           </p>
           <div className="flex items-center gap-4 opacity-50 hover:opacity-100 transition-opacity">
             <Image
@@ -101,7 +102,7 @@ export default function Footer() {
               alt="Beton Trowel Logo"
               width={120}
               height={30}
-              className="h-6 w-auto object-contain brightness-0 invert"
+              className="h-8 w-auto object-contain"
             />
           </div>
         </div>
