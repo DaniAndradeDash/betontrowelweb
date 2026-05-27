@@ -34,11 +34,12 @@ export default function CompactacionPage() {
             src={MAIN_IMG} 
             alt="Compaction" 
             fill 
+            sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw"
             className="object-cover"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Compactación de <span className="text-brand-black">Suelos</span></h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Compactación de <span className="text-brand-black">Pisos</span></h1>
           <p className="text-xl text-white max-w-2xl">
             Los compactadores de placas BT son reconocidos como el estándar de la industria para compactar suelos granulares y asfalto.
             Miles de usuarios satisfechos saben que los compactadores de placas BT tienen el máximo rendimiento, fácil manejo, bajo mantenimiento y larga vida útil.  
@@ -56,6 +57,7 @@ export default function CompactacionPage() {
                     src={p.img} 
                     alt={p.name} 
                     fill 
+                    sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>

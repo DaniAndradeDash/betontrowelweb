@@ -1,35 +1,10 @@
 import Image from "next/image";
 import Card from "../components/Card";
+import { maquinaAcabado } from "@/data/Productos";
 
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
 
 export default function AcabadoPage() {
-  const products = [
-    { 
-      id: 1,
-      name: "Allanadora sencilla de 24\"", 
-      desc: "Ideal para acabados lisos en superficies medianas. Motor eficiente y alta durabilidad.",
-      img: MAIN_IMG 
-    },
-    { 
-      id: 2,
-      name: "Hélice de Concreto Industrial", 
-      desc: "Diseñada para el nivelado preciso de losas de concreto de alta resistencia.",
-      img: MAIN_IMG 
-    },
-    { 
-      id: 3,
-      name: "Allanadora de Poder 36\"", 
-      desc: "Máxima eficiencia para grandes extensiones de concreto industrial.",
-      img: MAIN_IMG 
-    },
-    { 
-      id: 4,
-      name: "Kit de Aspas Profesionales", 
-      desc: "Accesorios de acero templado para diferentes tipos de acabado.",
-      img: MAIN_IMG 
-    },
-  ];
 
   return (
     <div className="flex flex-col">
@@ -40,6 +15,7 @@ export default function AcabadoPage() {
             src={MAIN_IMG} 
             alt="Concrete Finishing" 
             fill 
+            sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw"
             className="object-cover"
           />
         </div>
@@ -56,7 +32,7 @@ export default function AcabadoPage() {
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-center text-brand-blue mb-8 sm:mb-12 lg:mb-16">Nuestras máquinas</h1>
            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-10">
-            {products.map((p, i) => (
+            {maquinaAcabado.map((p, i) => (
               <Card key={p.id} id={p.id} name={p.name} desc={p.desc} img={p.img} />
             ))}
           </div>

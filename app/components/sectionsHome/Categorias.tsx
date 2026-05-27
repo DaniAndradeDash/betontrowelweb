@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import acabado from "@/public/Equipos/Allanadora1200-900.jpeg";
+import tools from "@/public/Equipos/tools.jpeg";
+import compaction from "@/public/Equipos/compaction.jpeg";
+import vibration from "@/public/Equipos/vibration.jpeg";
+
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
 
 export default function Categorias() {
@@ -8,25 +13,25 @@ export default function Categorias() {
             title: "Acabado para Concreto",
             href: "/acabado-de-concreto",
             desc: "Hélice y allanadoras para superficies perfectas.",
-            img: MAIN_IMG
+            img: acabado
         },
         {
             title: "Herramientas para Concreto",
             href: "/herramientas-de-concreto",
             desc: "Herramientas manuales de alta precisión y durabilidad.",
-            img: MAIN_IMG
+            img: tools
         },
         {
             title: "Compactación",
             href: "/compactacion",
             desc: "Compactadores saltarines y placas vibratorias.",
-            img: MAIN_IMG
+            img: compaction
         },
         {
             title: "Vibración",
             href: "/vibracion",
             desc: "Vibradores de concreto para eliminar burbujas de aire.",
-            img: MAIN_IMG
+            img: vibration
         },
     ];
      
@@ -52,9 +57,10 @@ export default function Categorias() {
                                         src={cat.img}
                                         alt={cat.title}
                                         fill
+                                        sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw"
                                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-60"></div>
+                                    <div className="absolute inset-0 bg-black/40 backdrop-blur-xs bg-gradient-to-t from-brand-black via-transparent to-transparent"></div>
                                     <div className="absolute bottom-0 left-0 p-6">
                                         <h3 className="text-xl font-bold text-white mb-2">{cat.title}</h3>
                                         <p className="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

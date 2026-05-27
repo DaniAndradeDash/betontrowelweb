@@ -49,6 +49,7 @@ export default function HomePage() {
                             src={HERO_IMG}
                             alt="Industrial Work"
                             fill
+                            sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw"
                             className="object-cover scale-110 hover:scale-100 transition-transform duration-[2s]"
                             priority
                         />

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
+import Nosotros from "@/public/Equipos/OficinaMonterrey.jpeg";
 
 export default function About() {
     const textos = [
@@ -14,12 +13,12 @@ export default function About() {
     return (
         <>
             {/* Section 3: About / Why Us */}
-            < section className="py-20 bg-brand-grey" >
+            <section className="py-20 bg-brand-grey">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
                             <Image
-                                src={MAIN_IMG}
+                                src={Nosotros}
                                 alt="Construction Machinery"
                                 width={600}
                                 height={400}
@@ -53,7 +52,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
         </>
     )
 };

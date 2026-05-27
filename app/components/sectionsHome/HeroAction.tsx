@@ -48,6 +48,7 @@ export default function HeroAction() {
                         src={MAIN_IMG}
                         alt="Construction Site"
                         fill
+                        sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw"
                         className="object-cover object-center grayscale-[20%] brightness-[0.4]"
                         priority
                     />

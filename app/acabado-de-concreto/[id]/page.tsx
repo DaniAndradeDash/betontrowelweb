@@ -76,7 +76,7 @@ export default async function MachineDetailPage({ params }: PageProps) {
                 {/* Lado Izquierdo: Visual */}
                 <div className="space-y-6">
                     <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-[#F5F5F5] border border-gray-100">
-                        <Image src={machine.image} alt={machine.name} fill className="object-cover" priority />
+                        <Image src={machine.image} alt={machine.name} fill sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-cover" priority />
                     </div>
                     <div className="p-10 bg-[#F5F5F5] rounded-[2rem] border border-gray-100">
                         <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF] mb-4 flex items-center gap-2">
@@ -129,7 +129,7 @@ export default async function MachineDetailPage({ params }: PageProps) {
                         {relatedProducts.map((prod) => (
                             <Link key={prod.id} href={`/acabado-de-concreto/${prod.id}`} className="group bg-white rounded-[2rem] p-4 flex items-center gap-6 hover:shadow-xl transition-all border border-transparent hover:border-[#00AEEF]/20">
                                 <div className="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gray-50">
-                                    <Image src={prod.img} alt={prod.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                                    <Image src={prod.img} alt={prod.name} fill sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-500" />
                                 </div>
                                 <div>
                                     <span className="text-[10px] font-bold text-[#00AEEF] tracking-widest uppercase">{prod.category}</span>
