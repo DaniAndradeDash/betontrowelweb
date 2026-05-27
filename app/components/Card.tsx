@@ -24,6 +24,7 @@ export default function Card({ id, name, desc, img }: CardProps) {
                 <h3 className="text-xl font-bold text-brand-black mb-2">{name}</h3>
                 <p className="text-gray-600 mb-6">{desc}</p>
                 <Link
+                    key={id}
                     href={`/acabado-de-concreto/${id}`}
                     className="w-full p-3 border border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors"
                 >

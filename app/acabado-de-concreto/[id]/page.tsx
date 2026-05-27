@@ -1,10 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, MessageCircle, Mail, Zap, ChevronRight } from 'lucide-react';
+import { maquinaAcabado } from '@/data/Productos';
+import { MachineAcabado } from '@/types/products';
 
 // 1. Definimos la interfaz para que TypeScript esté feliz
 interface PageProps {
-    params: Promise<{ id: string }>; // Ahora es una Promesa
+    machineAcabado: MachineAcabado
+    params: { id: string };
 }
 
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070";
@@ -44,10 +47,10 @@ const relatedProducts = [
 ];
 
 // 2. Convertimos la función en async
-export default async function MachineDetailPage({ params }: PageProps) {
+export default async function MachineDetailPage({ machineAcabado, params }: PageProps) {
     // 3. "Desenvolvemos" params con await antes de usarlo
     const { id } = await params;
-    const machine = mockMachineData[id];
+    const machine = maquinaAcabado[Number(id)];
 
     if (!machine) {
         return (
@@ -69,36 +72,36 @@ export default async function MachineDetailPage({ params }: PageProps) {
                 <Link href="/acabado-de-concreto" className="flex items-center gap-2 text-sm font-medium hover:text-[#00AEEF] transition-colors group">
                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Volver al Catálogo
                 </Link>
-                <span className="font-mono text-[10px] text-gray-400 uppercase tracking-[0.3em]">REF: BT-{id}</span>
+                <span className="font-mono text-[10px] text-gray-400 uppercase tracking-[0.3em]">{machine.ref}</span>
             </nav>
 
             <section className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 pb-20">
                 {/* Lado Izquierdo: Visual */}
                 <div className="space-y-6">
                     <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-[#F5F5F5] border border-gray-100">
-                        <Image src={machine.image} alt={machine.name} fill sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-cover" priority />
+                        <Image src={machine.img} alt={machine.name} fill sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-cover" priority />
                     </div>
                     <div className="p-10 bg-[#F5F5F5] rounded-[2rem] border border-gray-100">
                         <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF] mb-4 flex items-center gap-2">
                             <Zap size={14} /> Aplicación Técnica
                         </h3>
-                        <p className="text-sm leading-relaxed text-gray-600 font-light">{machine.usage}</p>
+                        <p className="text-sm leading-relaxed text-gray-600 font-light">Texto A - Usos</p>
                     </div>
                 </div>
 
                 {/* Lado Derecho: Info */}
                 <div className="flex flex-col justify-center">
-                    <span className="text-[#00AEEF] font-bold tracking-[0.2em] text-xs mb-4 uppercase">{machine.category}</span>
+                    <span className="text-[#00AEEF] font-bold tracking-[0.2em] text-xs mb-4 uppercase">Categoria</span>
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.9] text-[#1A1A1A]">{machine.name}</h1>
-                    <p className="text-xl text-gray-500 font-light mb-12 leading-relaxed max-w-lg">{machine.description}</p>
+                    <p className="text-xl text-gray-500 font-light mb-12 leading-relaxed max-w-lg">{machine.desc}</p>
 
                     <div className="grid grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-3xl overflow-hidden mb-12 shadow-sm">
-                        {machine.specs.map((spec: any, i: number) => (
+                        {/*{machine.specs.map((spec: any, i: number) => (
                             <div key={i} className="bg-white p-8 hover:bg-[#F5F5F5] transition-colors group">
                                 <span className="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">{spec.label}</span>
                                 <span className="block font-mono text-xl text-[#1A1A1A] group-hover:text-[#00AEEF] transition-colors">{spec.value}</span>
                             </div>
-                        ))}
+                        ))}*/}
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4">
