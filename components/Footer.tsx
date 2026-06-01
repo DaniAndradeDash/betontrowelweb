@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="md:col-span-4">
-            <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Navegación</h3>
+            <h3 className="text-[24px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Navegación</h3>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -62,11 +62,11 @@ export default function Footer() {
 
           {/* Contact & Social */}
           <div className="md:col-span-4">
-            <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Contacto</h3>
+            <h3 className="text-[24px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Contacto</h3>
             <ul className="space-y-2 text-sm text-gray-400 mb-8 font-light">
               <li>Email: c.andrade@equiposysuperficiesdemexico.com</li>
               <li>Telefono San Luis Potosí: +52 444 256 7853</li>
-              <li>Telefono Monterrey: +52 444 256 7853</li>
+              <li>Telefono Monterrey: +52 81 1018 0615</li>
               <li>Ubicación: Mariano Escobedo 1456-Norte, Treviño, 64570 Monterrey, N.L.</li>
             </ul>
 

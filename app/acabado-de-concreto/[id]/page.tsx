@@ -85,7 +85,7 @@ export default async function MachineDetailPage({ machineAcabado, params }: Page
                         <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF] mb-4 flex items-center gap-2">
                             <Zap size={14} /> Aplicación Técnica
                         </h3>
-                        <p className="text-sm leading-relaxed text-gray-600 font-light">Texto A - Usos</p>
+                        <p className="text-sm leading-relaxed text-gray-600 font-light">{machine.usage}</p>
                     </div>
                 </div>
 
@@ -96,12 +96,12 @@ export default async function MachineDetailPage({ machineAcabado, params }: Page
                     <p className="text-xl text-gray-500 font-light mb-12 leading-relaxed max-w-lg">{machine.desc}</p>
 
                     <div className="grid grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-3xl overflow-hidden mb-12 shadow-sm">
-                        {/*{machine.specs.map((spec: any, i: number) => (
+                        {machine.specs?.map((spec: any, i: number) => (
                             <div key={i} className="bg-white p-8 hover:bg-[#F5F5F5] transition-colors group">
                                 <span className="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">{spec.label}</span>
                                 <span className="block font-mono text-xl text-[#1A1A1A] group-hover:text-[#00AEEF] transition-colors">{spec.value}</span>
                             </div>
-                        ))}*/}
+                        ))}
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4">

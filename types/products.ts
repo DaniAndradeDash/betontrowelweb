@@ -4,4 +4,6 @@ export interface MachineAcabado {
   ref: string;
   desc: string;
   img: string;
+  usage?: string;
+  specs?: { label: string; value: string }[];
 }
