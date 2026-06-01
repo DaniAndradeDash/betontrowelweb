@@ -1,4 +1,4 @@
-import { MachineAcabado } from "../types/products";
+import { HerramientasConcreto, MachineAcabado } from "../types/products";
 
 export const maquinaAcabado: MachineAcabado[] = [
     {
@@ -85,4 +85,49 @@ export const maquinaAcabado: MachineAcabado[] = [
             { label: 'Velocidad', value: ' - ' }
         ]
     },
+];
+
+export const herramientasConcreto: HerramientasConcreto[] = [
+    {
+        id:0,
+        name: "Flotadora Ligera",
+        ref: "BT350095",
+        desc: "Flotadora Ligera  36\"90 X 20cm(SOLO FLOTADORA) ",
+        img: "/herramientas/Big-blue-complete-2048x2048.jpeg"
+    },
+    {
+        id:1,
+        name: "Flotadora de Canal",
+        ref: "BT101034C",
+        desc: "2.450m X 15cm Completa con cabezal, 3 extensiones de aluminio clip de 1.80m cada uno",
+        img: "/herramientas/Bullfloat-2048x2048.jpeg"
+    },
+    {
+        id:2,
+        name: "Corrector Check Rod",
+        ref: "BT101035C",
+        desc: "3.0m , 2\" de alto x 4\" de ancho. Completo, incluye cabezal de balero para herramienta profesional, 3 extensiones de aluminio de 1.83m cada uno y tensores(outriggers) ",
+        img: "/herramientas/Check-Rod-2048x2048.jpeg"
+    },
+    {
+        id:3,
+        name: "Corrector Bumpcutter completo",
+        ref: "BT101026C",
+        desc: "3.0m, 4\" de alto x 2\" de ancho. Completo, incluye cabezal de balero para herramienta profesional, 3 extensiones de aluminio de 1.83m cada uno, y tensores(outriggers)",
+        img: "/herramientas/BTSPRAY06L10La-2048x2048.jpeg"
+    },
+    {
+        id:4,
+        name: "Llana tipo fresno",
+        ref: "BT790074",
+        desc: "Fresno 1.20m X 12cm (solo llana)",
+        img: "/herramientas/Bullfloat-2048x2048.jpeg"
+    },
+    {
+        id:5,
+        name: "Flota Manual de Magnesio",
+        ref: "CT131",
+        desc: "Flota Manual de Magnesio 20\" x 3-1/4\" Mango Plastico",
+        img: "/herramientas/master-square-end-trowel-bleu-300x293.jpeg"
+    }
 ];

@@ -92,14 +92,14 @@ export default async function MachineDetailPage({ params }: PageProps) {
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.9] text-[#1A1A1A]">{machine.name}</h1>
                     <p className="text-xl text-gray-500 font-light mb-12 leading-relaxed max-w-lg">{machine.description}</p>
 
-                    <div className="grid grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-3xl overflow-hidden mb-12 shadow-sm">
+                    {/*<div className="grid grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-3xl overflow-hidden mb-12 shadow-sm">
                         {machine.specs.map((spec: any, i: number) => (
                             <div key={i} className="bg-white p-8 hover:bg-[#F5F5F5] transition-colors group">
                                 <span className="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">{spec.label}</span>
                                 <span className="block font-mono text-xl text-[#1A1A1A] group-hover:text-[#00AEEF] transition-colors">{spec.value}</span>
                             </div>
                         ))}
-                    </div>
+                    </div>*/}
 
                     <div className="flex flex-col sm:flex-row gap-4">
                         <a href="https://wa.me/525512345678" className="flex-1 bg-[#1A1A1A] text-white px-8 py-6 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-[#00AEEF] transition-all duration-500 shadow-2xl active:scale-95">

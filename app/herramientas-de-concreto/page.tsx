@@ -1,39 +1,19 @@
 import Image from "next/image";
+import Card from "../components/Card";
+import { herramientasConcreto } from "@/data/Productos";
 
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
 
 export default function HerramientasPage() {
-  const tools = [
-    { 
-      name: "Llana de Acero Inoxidable", 
-      desc: "Resistente a la corrosión, ideal para acabados finos y detallados.",
-      img: MAIN_IMG 
-    },
-    { 
-      name: "Flotador de Magnesio", 
-      desc: "Perfecto para nivelar la superficie antes del acabado final.",
-      img: MAIN_IMG 
-    },
-    { 
-      name: "Regla de Aluminio Reforzado", 
-      desc: "Ligera y extremadamente resistente para nivelaciones precisas.",
-      img: MAIN_IMG 
-    },
-    { 
-      name: "Kit de Herramientas de Mano", 
-      desc: "Conjunto esencial para maestros concreteros.",
-      img: MAIN_IMG 
-    },
-  ];
 
   return (
     <div className="flex flex-col">
-       <section className="bg-brand-blue text-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      <section className="bg-brand-blue text-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <Image 
-            src={MAIN_IMG} 
-            alt="Concrete Tools" 
-            fill 
+          <Image
+            src={MAIN_IMG}
+            alt="Concrete Tools"
+            fill
             className="object-cover"
           />
         </div>
@@ -45,27 +25,12 @@ export default function HerramientasPage() {
         </div>
       </section>
 
-       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 lg:gap-10">
-            {tools.map((t, i) => (
-              <div key={i} className="group border border-brand-grey rounded-2xl overflow-hidden hover:shadow-2xl transition-all">
-                <div className="aspect-video relative overflow-hidden">
-                  <Image 
-                    src={t.img} 
-                    alt={t.name} 
-                    fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-brand-black mb-2">{t.name}</h3>
-                  <p className="text-gray-600 mb-6">{t.desc}</p>
-                  <button className="w-full py-3 border border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors">
-                    Solicitar Información
-                  </button>
-                </div>
-              </div>
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-center text-brand-blue mb-8 sm:mb-12 lg:mb-16">Nuestras máquinas</h1> */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-10">
+            {herramientasConcreto.map((p, i) => (
+              <Card key={p.id} id={p.id} name={p.name} desc={p.desc} img={p.img} />
             ))}
           </div>
         </div>
