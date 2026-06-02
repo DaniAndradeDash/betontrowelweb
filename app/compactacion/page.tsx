@@ -5,7 +5,8 @@ const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q
 export default function CompactacionPage() {
   const products = [
     { 
-      name: "Compactador Saltarín (Rammer)", 
+      name: "Compactadora", 
+      ref: "BTR60H",
       desc: "Potente compactación en zanjas y áreas confinadas.",
       img: MAIN_IMG 
     },
