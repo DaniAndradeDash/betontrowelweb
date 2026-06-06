@@ -15,3 +15,11 @@ export interface HerramientasConcreto {
   desc: string;
   img: string;
 }
+
+export interface Compactadoras {
+  id: number;
+  name: string;
+  ref: string;
+  desc: string;
+  img: string;
+}

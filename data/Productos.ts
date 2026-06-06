@@ -1,4 +1,4 @@
-import { HerramientasConcreto, MachineAcabado } from "../types/products";
+import { HerramientasConcreto, MachineAcabado, Compactadoras } from "../types/products";
 
 export const maquinaAcabado: MachineAcabado[] = [
     {
@@ -130,4 +130,21 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         desc: "Flota Manual de Magnesio 20\" x 3-1/4\" Mango Plastico",
         img: "/herramientas/master-square-end-trowel-bleu-300x293.jpeg"
     }
+];
+
+export const compactadoras: Compactadoras[] = [
+    {
+        id:0,
+        name: "Compactadora",
+        ref: "BTR78Y",
+        desc: "El modelo BTR78Y, equipado con un motor diésel Yanmar original, garantiza un rendimiento robusto y fiable que lo distingue de otros compactadores. Su potente fuerza de impacto lo convierte en una opción destacada en el mercado.",
+        img: "/Compactacion/BTR76H-compactadora.jpeg"
+    },
+    {
+        id:1,
+        name: "Placa Vibratoria",
+        ref: "BTPC70BH",
+        desc: "Las compactadoras de placas frontales se mueven en una sola dirección, generalmente hacia adelante, y están diseñadas para proyectos de tamaño pequeño a mediano. Descubra las características y modelos clave de la gama BT.",
+        img: "/Compactacion/BTPC70BH4.jpg"
+    },
 ];

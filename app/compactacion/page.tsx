@@ -1,31 +1,13 @@
 import Image from "next/image";
+import Card from "../components/Card";
+import { compactadoras } from "@/data/Productos";
+import portadaAcabado from "@/public/Acabados/PortadaAcabados.jpeg";
 
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
 
 export default function CompactacionPage() {
-  const products = [
-    { 
-      name: "Compactadora", 
-      ref: "BTR60H",
-      desc: "Potente compactación en zanjas y áreas confinadas.",
-      img: MAIN_IMG 
-    },
-    { 
-      name: "Placa Vibratoria Reversible", 
-      desc: "Alta productividad para compactación de bases y pavimentos.",
-      img: MAIN_IMG 
-    },
-    { 
-      name: "Compactador de Superficie", 
-      desc: "Ideal para preparación de terrenos y bases granulares.",
-      img: MAIN_IMG 
-    },
-    { 
-      name: "Accesorios de Compactación", 
-      desc: "Zapatas intercambiables y kits de mantenimiento.",
-      img: MAIN_IMG 
-    },
-  ];
+
+  //https://www.betontrowel.com/wp-content/uploads/2024/12/compaction.jpg
 
   return (
     <div className="flex flex-col">
@@ -51,26 +33,9 @@ export default function CompactacionPage() {
        <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
-            {products.map((p, i) => (
-              <div key={i} className="group border border-brand-grey rounded-2xl overflow-hidden hover:shadow-2xl transition-all">
-                <div className="aspect-video relative overflow-hidden">
-                  <Image 
-                    src={p.img} 
-                    alt={p.name} 
-                    fill 
-                    sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-brand-black mb-2">{p.name}</h3>
-                  <p className="text-gray-600 mb-6">{p.desc}</p>
-                  <button className="w-full py-3 border border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors">
-                    Ver Información
-                  </button>
-                </div>
-              </div>
-            ))}
+            {compactadoras.map((p, i) => (
+              <Card key={p.id} id={p.id} name={p.name} desc={p.desc} img={p.img} />
+             ))}
           </div>
         </div>
       </section>
