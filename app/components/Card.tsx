@@ -6,9 +6,11 @@ interface CardProps {
     name: string;
     desc: string;
     img: string;
+    currentSlug: string;
 }
 
-export default function Card({ id, name, desc, img }: CardProps) {
+export default function Card({ id, name, desc, img, currentSlug }: CardProps) {
+    
     return (
         <div key={id} className="group border border-brand-grey rounded-2xl overflow-hidden hover:shadow-2xl transition-all">
             <div className="aspect-video relative overflow-hidden">
@@ -25,7 +27,7 @@ export default function Card({ id, name, desc, img }: CardProps) {
                 <p className="text-gray-600 mb-6">{desc}</p>
                 <Link
                     key={id}
-                    href={`/acabado-de-concreto/${id}`}
+                    href={`/${currentSlug}/${id}`}
                     className="w-full p-3 border border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors"
                 >
                     Ver información

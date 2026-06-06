@@ -19,7 +19,7 @@ const relatedProducts = [
 ];
 
 // 2. Convertimos la función en async
-export default async function MachineDetailPage({ machineAcabado, params }: PageProps) {
+export default async function MachineDetailPage({ params }: PageProps) {
     // 3. "Desenvolvemos" params con await antes de usarlo
     const { id } = await params;
     const machine = maquinaAcabado[Number(id)];
@@ -101,13 +101,13 @@ export default async function MachineDetailPage({ machineAcabado, params }: Page
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        {relatedProducts.map((prod) => (
+                        {maquinaAcabado.map((prod) => (
                             <Link key={prod.id} href={`/acabado-de-concreto/${prod.id}`} className="group bg-white rounded-[2rem] p-4 flex items-center gap-6 hover:shadow-xl transition-all border border-transparent hover:border-[#00AEEF]/20">
                                 <div className="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gray-50">
                                     <Image src={prod.img} alt={prod.name} fill sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-500" />
                                 </div>
                                 <div>
-                                    <span className="text-[10px] font-bold text-[#00AEEF] tracking-widest uppercase">{prod.category}</span>
+                                    <span className="text-[10px] font-bold text-[#00AEEF] tracking-widest uppercase">Categoria no disponible</span>
                                     <h4 className="text-xl font-bold text-[#1A1A1A] mt-1 group-hover:text-[#00AEEF] transition-colors">{prod.name}</h4>
                                     <p className="text-sm text-gray-400 mt-2 flex items-center gap-1">Ver equipo <ArrowLeft size={12} className="rotate-180" /></p>
                                 </div>

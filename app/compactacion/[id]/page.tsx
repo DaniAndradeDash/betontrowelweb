@@ -1,42 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, MessageCircle, Mail, Zap, ChevronRight } from 'lucide-react';
+import { compactadoras } from '@/data/Productos';
+import { Compactadoras } from '@/types/products';
 
 // 1. Definimos la interfaz para que TypeScript esté feliz
 interface PageProps {
-    params: Promise<{ id: string }>; // Ahora es una Promesa
+    compactadora: Compactadoras
+    params: { id: string };
 }
 
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070";
 
-const mockMachineData: any = {
-    '1': {
-        name: 'Mezcladora de Concreto Ligera',
-        category: 'MEZCLADO',
-        image: MAIN_IMG,
-        description: 'Ingeniería belga optimizada para máxima eficiencia en espacios reducidos. Ideal para proyectos de infraestructura residencial.',
-        usage: 'Perfecta para mezclar concreto, mortero y otros materiales de construcción en obras residenciales.',
-        specs: [
-            { label: 'Capacidad', value: '150 L' },
-            { label: 'Potencia', value: '0.5 HP' },
-            { label: 'Peso', value: '45 kg' },
-            { label: 'Velocidad', value: '28 rpm' }
-        ]
-    },
-    '2': {
-        name: 'Vibradora de Concreto Portátil',
-        category: 'VIBRACIÓN',
-        image: MAIN_IMG,
-        description: 'Elimina burbujas de aire y asegura un acabado denso y uniforme en superficies de concreto vertido.',
-        usage: 'Indispensable en la preparación de losas, columnas y vigas estructurales.',
-        specs: [
-            { label: 'Frecuencia', value: '12,000 vpm' },
-            { label: 'Amplitud', value: '0.8 mm' },
-            { label: 'Peso', value: '8 kg' },
-            { label: 'Poder', value: 'Eléctrica' }
-        ]
-    }
-};
 
 const relatedProducts = [
     { id: '1', name: 'Mezcladora Ligera', category: 'MEZCLADO', img: MAIN_IMG },
@@ -47,9 +22,9 @@ const relatedProducts = [
 export default async function MachineDetailPage({ params }: PageProps) {
     // 3. "Desenvolvemos" params con await antes de usarlo
     const { id } = await params;
-    const machine = mockMachineData[id];
+    const comp = compactadoras[Number(id)];
 
-    if (!machine) {
+    if (!comp) {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-white font-sans px-6">
                 <h1 className="text-9xl font-bold text-[#F5F5F5] mb-4">404</h1>
@@ -76,30 +51,30 @@ export default async function MachineDetailPage({ params }: PageProps) {
                 {/* Lado Izquierdo: Visual */}
                 <div className="space-y-6">
                     <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-[#F5F5F5] border border-gray-100">
-                        <Image src={machine.image} alt={machine.name} fill className="object-cover" priority />
+                        <Image src={comp.img} alt={comp.name} fill className="object-contain" priority />
                     </div>
                     <div className="p-10 bg-[#F5F5F5] rounded-[2rem] border border-gray-100">
                         <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF] mb-4 flex items-center gap-2">
                             <Zap size={14} /> Aplicación Técnica
                         </h3>
-                        <p className="text-sm leading-relaxed text-gray-600 font-light">{machine.usage}</p>
+                        <p className="text-sm leading-relaxed text-gray-600 font-light">sin uso</p>
                     </div>
                 </div>
 
                 {/* Lado Derecho: Info */}
                 <div className="flex flex-col justify-center">
-                    <span className="text-[#00AEEF] font-bold tracking-[0.2em] text-xs mb-4 uppercase">{machine.category}</span>
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.9] text-[#1A1A1A]">{machine.name}</h1>
-                    <p className="text-xl text-gray-500 font-light mb-12 leading-relaxed max-w-lg">{machine.description}</p>
+                    <span className="text-[#00AEEF] font-bold tracking-[0.2em] text-xs mb-4 uppercase">sin categoria</span>
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.9] text-[#1A1A1A]">{comp.name}</h1>
+                    <p className="text-xl text-gray-500 font-light mb-12 leading-relaxed max-w-lg">{comp.desc}</p>
 
-                    <div className="grid grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-3xl overflow-hidden mb-12 shadow-sm">
-                        {machine.specs.map((spec: any, i: number) => (
+                    {/*<div className="grid grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-3xl overflow-hidden mb-12 shadow-sm">
+                        {comp?.specs.map((spec: any, i: number) => (
                             <div key={i} className="bg-white p-8 hover:bg-[#F5F5F5] transition-colors group">
                                 <span className="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">{spec.label}</span>
                                 <span className="block font-mono text-xl text-[#1A1A1A] group-hover:text-[#00AEEF] transition-colors">{spec.value}</span>
                             </div>
                         ))}
-                    </div>
+                    </div>*/}
 
                     <div className="flex flex-col sm:flex-row gap-4">
                         <a href="https://wa.me/525512345678" className="flex-1 bg-[#1A1A1A] text-white px-8 py-6 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-[#00AEEF] transition-all duration-500 shadow-2xl active:scale-95">
