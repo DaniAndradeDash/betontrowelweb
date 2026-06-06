@@ -23,3 +23,13 @@ export interface Compactadoras {
   desc: string;
   img: string;
 }
+
+export interface Vibradores {
+  id: number;
+  name: string;
+  ref: string;
+  desc: string;
+  img: string;
+  usage?: string;
+  specs?: { label: string; value: string }[];
+}

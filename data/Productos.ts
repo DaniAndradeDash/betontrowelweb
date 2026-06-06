@@ -1,4 +1,4 @@
-import { HerramientasConcreto, MachineAcabado, Compactadoras } from "../types/products";
+import { HerramientasConcreto, MachineAcabado, Compactadoras, Vibradores } from "../types/products";
 
 export const maquinaAcabado: MachineAcabado[] = [
     {
@@ -146,5 +146,78 @@ export const compactadoras: Compactadoras[] = [
         ref: "BTPC70BH",
         desc: "Las compactadoras de placas frontales se mueven en una sola dirección, generalmente hacia adelante, y están diseñadas para proyectos de tamaño pequeño a mediano. Descubra las características y modelos clave de la gama BT.",
         img: "/Compactacion/BTPC70BH4.jpg"
+    },
+];
+
+export const vibradores: Vibradores[] = [
+    {
+        id:0,
+        name: "Vibrador de Mochila",
+        ref: "BTBP35H",
+        desc: "El vibrador de hormigón BackPack está diseñado para funcionar con ejes flexibles y cabezales vibradores Humdinger, y permite una autonomía total al operario sin tener que preocuparse por cables de alimentación y motores sueltos.",
+        img: "/Vibradores/HDBP35H-HDV-1-600x800.jpg",
+        usage: 'Su estructura robusta pero ligera permite trabajar en los entornos más exigentes.',
+        specs: [
+            { label: 'Modelo', value: 'BTBP35H' },
+            { label: 'Motor', value: 'Honda GX35' },
+            { label: 'Fuerza', value: '1,5 CV' },
+            { label: 'Peso', value: '7,7 kg' }
+        ]
+    },
+    {
+        id:1,
+        name: "Vibrador portatil Electrico",
+        ref: "HVU220",
+        desc: "Vibrador de hormigón portátil, diseñadas para proteger el perímetro del motor contra golpes. Motores de 2,3 kW con doble aislamiento, 230 V",
+        img: "/Vibradores/HDV-HVU-600x400.jpg",
+        usage:'Tres asas alrededor del cuerpo del motor y otra asa en la parte trasera para usar con transmisiones cortas y en trabajos en posición vertical.',
+        specs: [
+            { label: 'Voltaje', value: '230 V' },
+            { label: 'HZ', value: '50/60' },
+            { label: 'Velocidad', value: '18000' },
+            { label: 'Peso', value: ' 5,5Kg ' }
+        ]
+    },
+    {
+        id:2,
+        name: "Vibrador a Gasolina",
+        ref: "BTRP25",
+        desc: "Los vibradores pendulares de accionamiento flexible BT están fabricados para proporcionar una compactación eficiente del hormigón y la eliminación de las burbujas de aire presentes en el mismo.",
+        img: "/Vibradores/BTHPU-BTRP-600x400.jpg",
+        usage: 'El eje flexible tiene una espiral blindada en ambos extremos para proteger el eje.',
+        specs: [
+            { label: 'Modelo', value: 'BTRP25' },
+            { label: 'Eje', value: '6m' },
+            { label: 'Diametro', value: '24 mm' },
+            { label: 'Frecuencia', value: '15600 VPM' }
+        ]
+    },
+    {
+        id:3,
+        name: "Vibrador portatil a Gasolina",
+        ref: "BT45H",
+        desc: "La máquina vibradora Beton Portavibe ofrece una solución sencilla para vibrar grandes losas de hormigón, ya que es una unidad ligera e independiente sin ejes ni cables eléctricos que arrastrar a través del hormigón detrás del operario.",
+        img: "/Vibradores/BT45H-1-600x450.jpg",
+        usage: 'EUnidad portátil ligera y bien equilibrada con correa de transporte para mayor comodidad del operador.',
+        specs: [
+            { label: 'Motor', value: 'HONDA GX35' },
+            { label: 'Diametro', value: '44 mm' },
+            { label: 'Frecuencia', value: '9000 VPM' },
+            { label: 'Peso', value: '11kg' }
+        ]
+    },
+    {
+        id:4,
+        name: "Regla Magic / EuroScreed",
+        ref: "BTS35",
+        desc: "Método rápido, eficiente y económico para nivelar con precisión un piso de concreto. Empuñaduras totalmente ajustables para obtener la máxima comodidad del operador, acelerador de gatillo La combinación de vibración de alta frecuencia con una cuchilla curva dispersa y hace retroceder el hormigón para lograr un nivel perfecto.",
+        img: "/Vibradores/BTS35H.1-600x663.jpg",
+        usage: 'La combinación de vibración de alta frecuencia con una cuchilla curva dispersa y hace retroceder el hormigón para lograr un nivel perfecto.',
+        specs: [
+            { label: 'Motor', value: 'Honda GX35 1.3 HP, 4 tiempos' },
+            { label: 'Poder de sonido', value: '50 DB' },
+            { label: 'Vibración', value: '<9 m/s cuadrado' },
+            { label: 'peso', value: '12.7 kg' }
+        ]
     },
 ];

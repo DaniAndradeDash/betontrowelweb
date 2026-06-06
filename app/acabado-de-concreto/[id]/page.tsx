@@ -12,34 +12,6 @@ interface PageProps {
 
 const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070";
 
-const mockMachineData: any = {
-    '1': {
-        name: 'Mezcladora de Concreto Ligera',
-        category: 'MEZCLADO',
-        image: MAIN_IMG,
-        description: 'Ingeniería belga optimizada para máxima eficiencia en espacios reducidos. Ideal para proyectos de infraestructura residencial.',
-        usage: 'Perfecta para mezclar concreto, mortero y otros materiales de construcción en obras residenciales.',
-        specs: [
-            { label: 'Capacidad', value: '150 L' },
-            { label: 'Potencia', value: '0.5 HP' },
-            { label: 'Peso', value: '45 kg' },
-            { label: 'Velocidad', value: '28 rpm' }
-        ]
-    },
-    '2': {
-        name: 'Vibradora de Concreto Portátil',
-        category: 'VIBRACIÓN',
-        image: MAIN_IMG,
-        description: 'Elimina burbujas de aire y asegura un acabado denso y uniforme en superficies de concreto vertido.',
-        usage: 'Indispensable en la preparación de losas, columnas y vigas estructurales.',
-        specs: [
-            { label: 'Frecuencia', value: '12,000 vpm' },
-            { label: 'Amplitud', value: '0.8 mm' },
-            { label: 'Peso', value: '8 kg' },
-            { label: 'Poder', value: 'Eléctrica' }
-        ]
-    }
-};
 
 const relatedProducts = [
     { id: '1', name: 'Mezcladora Ligera', category: 'MEZCLADO', img: MAIN_IMG },
