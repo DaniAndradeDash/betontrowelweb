@@ -63,7 +63,7 @@ export default async function MachineDetailPage({ params }: PageProps) {
 
                 {/* Lado Derecho: Info */}
                 <div className="flex flex-col justify-center">
-                    <span className="text-[#00AEEF] font-bold tracking-[0.2em] text-xs mb-4 uppercase">Categoria</span>
+                    <span className="text-[#00AEEF] font-bold tracking-[0.2em] text-xs mb-4 uppercase">{machine.category}</span>
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.9] text-[#1A1A1A]">{machine.name}</h1>
                     <p className="text-xl text-gray-500 font-light mb-12 leading-relaxed max-w-lg">{machine.desc}</p>
 
@@ -77,7 +77,7 @@ export default async function MachineDetailPage({ params }: PageProps) {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/525512345678" className="flex-1 bg-[#1A1A1A] text-white px-8 py-6 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-[#00AEEF] transition-all duration-500 shadow-2xl active:scale-95">
+                        <a href="https://wa.me/528110180615" className="flex-1 bg-[#1A1A1A] text-white px-8 py-6 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-[#00AEEF] transition-all duration-500 shadow-2xl active:scale-95">
                             <MessageCircle size={22} /> Cotizar WhatsApp
                         </a>
                         <button className="px-10 py-6 rounded-full border border-gray-200 font-bold hover:border-[#00AEEF] transition-all text-[#1A1A1A]">
@@ -107,7 +107,7 @@ export default async function MachineDetailPage({ params }: PageProps) {
                                     <Image src={prod.img} alt={prod.name} fill sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-500" />
                                 </div>
                                 <div>
-                                    <span className="text-[10px] font-bold text-[#00AEEF] tracking-widest uppercase">Categoria no disponible</span>
+                                    <span className="text-[10px] font-bold text-[#00AEEF] tracking-widest uppercase">{prod.category}</span>
                                     <h4 className="text-xl font-bold text-[#1A1A1A] mt-1 group-hover:text-[#00AEEF] transition-colors">{prod.name}</h4>
                                     <p className="text-sm text-gray-400 mt-2 flex items-center gap-1">Ver equipo <ArrowLeft size={12} className="rotate-180" /></p>
                                 </div>

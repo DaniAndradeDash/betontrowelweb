@@ -3,20 +3,22 @@ import { HerramientasConcreto, MachineAcabado, Compactadoras, Vibradores } from 
 export const maquinaAcabado: MachineAcabado[] = [
     {
         id: 0,
+        category: "Maquinas para acabado de concreto",
         name: "Allanadora Doble  36\"",
-        ref:"BT900-HPFH24",
+        ref:"BT900HC",
         desc: "Cuenta con un Motor Honda 24.0hp,  8 Llanas de acabado de 6\"X14\", direccion mecanica, asiento ajustable, 2 luces, sistema de aspersión, Ancho de operacion 1.90mt",
         img: "/Acabados/BT900HHW2-300x225.jpeg",
         usage: 'Perfecta para mezclar concreto, mortero y otros materiales de construcción en obras residenciales.',
         specs: [
             { label: 'Motor', value: 'Honda 24.0hp' },
             { label: 'LLanas', value: 'De Acabado 6"x14"' },
-            { label: 'Peso', value: '45 kg' },
+            { label: 'Peso', value: '315 kg' },
             { label: 'Operación', value: '1.90m' }
         ]
     },
     {
         id: 1,
+        category: "Maquinas para acabado de concreto",
         name: "Allanadora Doble  46\"",
         ref: "BT120-2/5/PFV35",
         desc: "Cuenta con  Motor Vanguard 35.0hp,  10 Llanas de acabado de 6\"X18\", direccion mecanica, Ancho de operacion 2.50mt, Dimensiones ;  Largo 2.54 mt x ancho 1.27 mt x alto 1.360mt",
@@ -31,6 +33,7 @@ export const maquinaAcabado: MachineAcabado[] = [
     },
     {
         id: 2,
+        category: "Maquinas para acabado de concreto",
         name: "Allanadora Sencilla de 36\"",
         ref: "BT90H160",
         desc: "Cuenta con un Motor Honda de 5.5hp, 4 llanas de acabado de 6\"x14\", diametro de operación 90cm, ",
@@ -45,6 +48,7 @@ export const maquinaAcabado: MachineAcabado[] = [
     },
     {
         id: 3,
+        category: "Maquinas para acabado de concreto",
         name: "Allanadora sencilla  46\"",
         ref: "BT120H390",
         desc: "Cuenta con un Motor Honda  13.0hp, 4 llanas de acabado de  6\"x18\", diametro de operación 120cm, peso 113kg.",
@@ -59,6 +63,7 @@ export const maquinaAcabado: MachineAcabado[] = [
     },
     {
         id: 4,
+        category: "Maquinas para acabado de concreto",
         name: "ORILLADORA  24\"(60cm)",
         ref: "BT60H160",
         desc: "Cuenta con un motor Honda 5.5hp, 4 llanas de acabado de 4-3/4\" x 9\", peso 53kg,  Incluye disco de flotado 24\"",
@@ -73,15 +78,16 @@ export const maquinaAcabado: MachineAcabado[] = [
     },
     {
         id: 5,
+        category: "Maquinas para acabado de concreto",
         name: "Orilladora 30\"(75cm)",
-        ref: "BT75HE160",
+        ref: "BT60H",
         desc: "Cuenta con un Motor Kubota Diesel mod. D1105, Alternador MECC, LT3N- 130 / 4, 110V, 50HZ, 4 x 300W lamparas LED, ",
         img: "/Acabados/BT60H-painted-300x225.jpeg",
         usage: 'Perfecta para mezclar concreto, mortero y otros materiales de construcción en obras residenciales.',
         specs: [
-            { label: 'Motor', value: 'Kubota Diesel D1105' },
+            { label: 'Motor', value: 'Honda GX160, 5.5 HP' },
             { label: 'Potencia', value: '0.5 HP' },
-            { label: 'Peso', value: ' - ' },
+            { label: 'Peso', value: ' 53 Kg ' },
             { label: 'Velocidad', value: ' - ' }
         ]
     },
@@ -90,6 +96,7 @@ export const maquinaAcabado: MachineAcabado[] = [
 export const herramientasConcreto: HerramientasConcreto[] = [
     {
         id:0,
+        category: "Herramientas para concreto",
         name: "Flotadora Ligera",
         ref: "BT350095",
         desc: "Flotadora Ligera  36\"90 X 20cm(SOLO FLOTADORA) ",
@@ -97,6 +104,7 @@ export const herramientasConcreto: HerramientasConcreto[] = [
     },
     {
         id:1,
+        category: "Herramientas para concreto",
         name: "Flotadora de Canal",
         ref: "BT101034C",
         desc: "2.450m X 15cm Completa con cabezal, 3 extensiones de aluminio clip de 1.80m cada uno",
@@ -104,6 +112,7 @@ export const herramientasConcreto: HerramientasConcreto[] = [
     },
     {
         id:2,
+        category: "Herramientas para concreto",
         name: "Corrector Check Rod",
         ref: "BT101035C",
         desc: "3.0m , 2\" de alto x 4\" de ancho. Completo, incluye cabezal de balero para herramienta profesional, 3 extensiones de aluminio de 1.83m cada uno y tensores(outriggers) ",
@@ -111,6 +120,7 @@ export const herramientasConcreto: HerramientasConcreto[] = [
     },
     {
         id:3,
+        category: "Herramientas para concreto",
         name: "Corrector Bumpcutter completo",
         ref: "BT101026C",
         desc: "3.0m, 4\" de alto x 2\" de ancho. Completo, incluye cabezal de balero para herramienta profesional, 3 extensiones de aluminio de 1.83m cada uno, y tensores(outriggers)",
@@ -118,6 +128,7 @@ export const herramientasConcreto: HerramientasConcreto[] = [
     },
     {
         id:4,
+        category: "Herramientas para concreto",
         name: "Llana tipo fresno",
         ref: "BT790074",
         desc: "Fresno 1.20m X 12cm (solo llana)",
@@ -125,6 +136,7 @@ export const herramientasConcreto: HerramientasConcreto[] = [
     },
     {
         id:5,
+        category: "Herramientas para concreto",
         name: "Flota Manual de Magnesio",
         ref: "CT131",
         desc: "Flota Manual de Magnesio 20\" x 3-1/4\" Mango Plastico",
@@ -135,23 +147,41 @@ export const herramientasConcreto: HerramientasConcreto[] = [
 export const compactadoras: Compactadoras[] = [
     {
         id:0,
+        category: "Equipo de Compactación",
         name: "Compactadora",
-        ref: "BTR78Y",
-        desc: "El modelo BTR78Y, equipado con un motor diésel Yanmar original, garantiza un rendimiento robusto y fiable que lo distingue de otros compactadores. Su potente fuerza de impacto lo convierte en una opción destacada en el mercado.",
-        img: "/Compactacion/BTR76H-compactadora.jpeg"
+        ref: "BTR60H",
+        desc: "El modelo BTR60H, equipado con un motor diésel Yanmar original, garantiza un rendimiento robusto y fiable que lo distingue de otros compactadores. Su potente fuerza de impacto lo convierte en una opción destacada en el mercado.",
+        img: "/Compactacion/BTR76H-compactadora.jpeg",
+        usage: 'Compactadora',
+        specs: [
+            { label: 'Motor', value: 'HONDA GX100' },
+            { label: 'Impacto', value: 'p.8 kN' },
+            { label: 'Peso', value: '60KG' },
+            { label: 'Tamaño de la zapata', value: '300 x 250 mm' }
+        ]
+
     },
     {
         id:1,
+        category: "Equipo de Compactación",
         name: "Placa Vibratoria",
-        ref: "BTPC70BH",
+        ref: "BTPC95H",
         desc: "Las compactadoras de placas frontales se mueven en una sola dirección, generalmente hacia adelante, y están diseñadas para proyectos de tamaño pequeño a mediano. Descubra las características y modelos clave de la gama BT.",
-        img: "/Compactacion/BTPC70BH4.jpg"
+        img: "/Compactacion/BTPC70BH4.jpg",
+        usage: 'Compactadora',
+        specs: [
+            { label: 'Motor', value: 'HONDA GX160' },
+            { label: 'Impacto', value: '15 kN' },
+            { label: 'Peso', value: '95 kg' },
+            { label: 'Tamaño de la zapata', value: '300 x 250 mm' }
+        ]
     },
 ];
 
 export const vibradores: Vibradores[] = [
     {
         id:0,
+        category: "Vibradores",
         name: "Vibrador de Mochila",
         ref: "BTBP35H",
         desc: "El vibrador de hormigón BackPack está diseñado para funcionar con ejes flexibles y cabezales vibradores Humdinger, y permite una autonomía total al operario sin tener que preocuparse por cables de alimentación y motores sueltos.",
@@ -166,6 +196,7 @@ export const vibradores: Vibradores[] = [
     },
     {
         id:1,
+        category: "Vibradores",
         name: "Vibrador portatil Electrico",
         ref: "HVU220",
         desc: "Vibrador de hormigón portátil, diseñadas para proteger el perímetro del motor contra golpes. Motores de 2,3 kW con doble aislamiento, 230 V",
@@ -180,6 +211,7 @@ export const vibradores: Vibradores[] = [
     },
     {
         id:2,
+        category: "Vibradores",
         name: "Vibrador a Gasolina",
         ref: "BTRP25",
         desc: "Los vibradores pendulares de accionamiento flexible BT están fabricados para proporcionar una compactación eficiente del hormigón y la eliminación de las burbujas de aire presentes en el mismo.",
@@ -194,6 +226,7 @@ export const vibradores: Vibradores[] = [
     },
     {
         id:3,
+        category: "Vibradores",
         name: "Vibrador portatil a Gasolina",
         ref: "BT45H",
         desc: "La máquina vibradora Beton Portavibe ofrece una solución sencilla para vibrar grandes losas de hormigón, ya que es una unidad ligera e independiente sin ejes ni cables eléctricos que arrastrar a través del hormigón detrás del operario.",
@@ -208,6 +241,7 @@ export const vibradores: Vibradores[] = [
     },
     {
         id:4,
+        category: "Vibradores",
         name: "Regla Magic / EuroScreed",
         ref: "BTS35",
         desc: "Método rápido, eficiente y económico para nivelar con precisión un piso de concreto. Empuñaduras totalmente ajustables para obtener la máxima comodidad del operador, acelerador de gatillo La combinación de vibración de alta frecuencia con una cuchilla curva dispersa y hace retroceder el hormigón para lograr un nivel perfecto.",

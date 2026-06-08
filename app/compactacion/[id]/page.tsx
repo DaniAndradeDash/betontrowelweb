@@ -41,23 +41,23 @@ export default async function MachineDetailPage({ params }: PageProps) {
 
        {/* Navegación Sutil */}
        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex justify-between items-center">
-                <Link href="/acabado-de-concreto" className="flex items-center gap-2 text-sm font-medium hover:text-[#00AEEF] transition-colors group">
+                <Link href="/compactacion" className="flex items-center gap-2 text-sm font-medium hover:text-[#00AEEF] transition-colors group">
                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Volver al Catálogo
                 </Link>
                 <span className="font-mono text-[10px] text-gray-400 uppercase tracking-[0.3em]">REF: BT-{id}</span>
             </nav>
 
-             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 sm:gap-12 lg:gap-16 pb-12 sm:pb-16 lg:pb-20">
+             <section className="max-w-7xl grid-cols-1 lg:grid-cols-2 mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 sm:gap-12 lg:gap-16 pb-12 sm:pb-16 lg:pb-20">
                 {/* Lado Izquierdo: Visual */}
                 <div className="space-y-6">
                     <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-[#F5F5F5] border border-gray-100">
-                        <Image src={comp.img} alt={comp.name} fill className="object-contain" priority />
+                        <Image src={comp.img} alt={comp.name} fill sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-cover" priority />
                     </div>
                     <div className="p-10 bg-[#F5F5F5] rounded-[2rem] border border-gray-100">
                         <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#00AEEF] mb-4 flex items-center gap-2">
                             <Zap size={14} /> Aplicación Técnica
                         </h3>
-                        <p className="text-sm leading-relaxed text-gray-600 font-light">sin uso</p>
+                        <p className="text-sm leading-relaxed text-gray-600 font-light">{comp.usage}</p>
                     </div>
                 </div>
 
@@ -67,17 +67,17 @@ export default async function MachineDetailPage({ params }: PageProps) {
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.9] text-[#1A1A1A]">{comp.name}</h1>
                     <p className="text-xl text-gray-500 font-light mb-12 leading-relaxed max-w-lg">{comp.desc}</p>
 
-                    {/*<div className="grid grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-3xl overflow-hidden mb-12 shadow-sm">
-                        {comp?.specs.map((spec: any, i: number) => (
+                    <div className="grid grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-3xl overflow-hidden mb-12 shadow-sm">
+                        {comp.specs?.map((spec: any, i: number) => (
                             <div key={i} className="bg-white p-8 hover:bg-[#F5F5F5] transition-colors group">
                                 <span className="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">{spec.label}</span>
                                 <span className="block font-mono text-xl text-[#1A1A1A] group-hover:text-[#00AEEF] transition-colors">{spec.value}</span>
                             </div>
                         ))}
-                    </div>*/}
+                    </div>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/525512345678" className="flex-1 bg-[#1A1A1A] text-white px-8 py-6 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-[#00AEEF] transition-all duration-500 shadow-2xl active:scale-95">
+                        <a href="https://wa.me/528110180615" className="flex-1 bg-[#1A1A1A] text-white px-8 py-6 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-[#00AEEF] transition-all duration-500 shadow-2xl active:scale-95">
                             <MessageCircle size={22} /> Cotizar WhatsApp
                         </a>
                         <button className="px-10 py-6 rounded-full border border-gray-200 font-bold hover:border-[#00AEEF] transition-all text-[#1A1A1A]">
@@ -95,14 +95,14 @@ export default async function MachineDetailPage({ params }: PageProps) {
                             <h2 className="text-3xl font-bold tracking-tight mb-2">Equipos Complementarios</h2>
                             <p className="text-gray-500 font-light">Potencia tu flujo de trabajo con tecnología belga.</p>
                         </div>
-                        <Link href="/acabado-de-concreto" className="text-sm font-bold text-[#00AEEF] flex items-center gap-1 hover:underline">
+                        <Link href="/compactacion" className="text-sm font-bold text-[#00AEEF] flex items-center gap-1 hover:underline">
                             Ver todo el catálogo <ChevronRight size={16} />
                         </Link>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        {relatedProducts.map((prod) => (
-                            <Link key={prod.id} href={`/acabado-de-concreto/${prod.id}`} className="group bg-white rounded-[2rem] p-4 flex items-center gap-6 hover:shadow-xl transition-all border border-transparent hover:border-[#00AEEF]/20">
+                        {compactadoras.map((prod) => (
+                            <Link key={prod.id} href={`/compactacion/${prod.id}`} className="group bg-white rounded-[2rem] p-4 flex items-center gap-6 hover:shadow-xl transition-all border border-transparent hover:border-[#00AEEF]/20">
                                 <div className="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gray-50">
                                     <Image src={prod.img} alt={prod.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
                                 </div>

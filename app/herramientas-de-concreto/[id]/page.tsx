@@ -10,13 +10,8 @@ interface PageProps {
     params: { id: string };
 }
 
+//const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070";
 
-const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070";
-
-const relatedProducts = [
-    { id: '1', name: 'Mezcladora Ligera', category: 'MEZCLADO', img: MAIN_IMG },
-    { id: '2', name: 'Vibradora Portátil', category: 'VIBRACIÓN', img: MAIN_IMG },
-];
 
 // 2. Convertimos la función en async
 export default async function MachineDetailPage({ params }: PageProps) {
@@ -41,7 +36,7 @@ export default async function MachineDetailPage({ params }: PageProps) {
 
             {/* Navegación Sutil */}
             <nav className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
-                <Link href="/acabado-de-concreto" className="flex items-center gap-2 text-sm font-medium hover:text-[#00AEEF] transition-colors group">
+                <Link href="/herramientas-de-concreto" className="flex items-center gap-2 text-sm font-medium hover:text-[#00AEEF] transition-colors group">
                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Volver al Catálogo
                 </Link>
                 <span className="font-mono text-[10px] text-gray-400 uppercase tracking-[0.3em]">REF: BT-{id}</span>
@@ -63,7 +58,7 @@ export default async function MachineDetailPage({ params }: PageProps) {
 
                 {/* Lado Derecho: Info */}
                 <div className="flex flex-col justify-center">
-                    <span className="text-[#00AEEF] font-bold tracking-[0.2em] text-xs mb-4 uppercase">Categoría</span>
+                    <span className="text-[#00AEEF] font-bold tracking-[0.2em] text-xs mb-4 uppercase">{tool.category}</span>
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.9] text-[#1A1A1A]">{tool.name}</h1>
                     <p className="text-xl text-gray-500 font-light mb-12 leading-relaxed max-w-lg">{tool.desc}</p>
 
@@ -77,7 +72,7 @@ export default async function MachineDetailPage({ params }: PageProps) {
                     </div>*/}
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/525512345678" className="flex-1 bg-[#1A1A1A] text-white px-8 py-6 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-[#00AEEF] transition-all duration-500 shadow-2xl active:scale-95">
+                        <a href="https://wa.me/528110180615" className="flex-1 bg-[#1A1A1A] text-white px-8 py-6 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-[#00AEEF] transition-all duration-500 shadow-2xl active:scale-95">
                             <MessageCircle size={22} /> Cotizar WhatsApp
                         </a>
                         <button className="px-10 py-6 rounded-full border border-gray-200 font-bold hover:border-[#00AEEF] transition-all text-[#1A1A1A]">
@@ -95,14 +90,14 @@ export default async function MachineDetailPage({ params }: PageProps) {
                             <h2 className="text-3xl font-bold tracking-tight mb-2">Equipos Complementarios</h2>
                             <p className="text-gray-500 font-light">Potencia tu flujo de trabajo con tecnología belga.</p>
                         </div>
-                        <Link href="/acabado-de-concreto" className="text-sm font-bold text-[#00AEEF] flex items-center gap-1 hover:underline">
+                        <Link href="/herramientas-de-concreto" className="text-sm font-bold text-[#00AEEF] flex items-center gap-1 hover:underline">
                             Ver todo el catálogo <ChevronRight size={16} />
                         </Link>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        {relatedProducts.map((prod) => (
-                            <Link key={prod.id} href={`/acabado-de-concreto/${prod.id}`} className="group bg-white rounded-[2rem] p-4 flex items-center gap-6 hover:shadow-xl transition-all border border-transparent hover:border-[#00AEEF]/20">
+                        {herramientasConcreto.map((prod) => (
+                            <Link key={prod.id} href={`/herramientas-de-concreto/${prod.id}`} className="group bg-white rounded-[2rem] p-4 flex items-center gap-6 hover:shadow-xl transition-all border border-transparent hover:border-[#00AEEF]/20">
                                 <div className="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gray-50">
                                     <Image src={prod.img} alt={prod.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
                                 </div>
