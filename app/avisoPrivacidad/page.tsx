@@ -17,7 +17,7 @@ const AvisoPrivacidad = () => {
             </div>
 
             {/* Contenedor Principal del Documento Legal */}
-            <article className="max-w-4xl mx-auto bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden">
+            <article className="max-w-4xl mx-auto bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
                 
                 {/* Encabezado del Documento */}
                 <div className="bg-brand-black p-8 sm:p-12 text-white relative overflow-hidden">

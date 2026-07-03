@@ -27,17 +27,17 @@ export default function ProductDetailLayout({ product, categorySlug, allProducts
         <main className="min-h-screen bg-white text-foreground font-sans selection:bg-brand-blue selection:text-white">
 
             {/* Navegación Sutil */}
-            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex justify-between items-center">
+            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex justify-between items-center">
                 <Link href={`/${categorySlug}`} className="flex items-center gap-2 text-sm font-medium hover:text-brand-blue transition-colors group">
                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Volver al Catálogo
                 </Link>
                 <span className="font-mono text-[10px] text-gray-400 uppercase tracking-[0.3em]">{product.ref}</span>
             </nav>
 
-            <section className="max-w-7xl grid-cols-1 lg:grid-cols-2 mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 sm:gap-12 lg:gap-16 pb-12 sm:pb-16 lg:pb-20">
+            <section className="max-w-7xl grid-cols-1 lg:grid-cols-2 mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 sm:gap-12 lg:gap-16 pb-16 lg:pb-20">
                 {/* Lado Izquierdo: Visual */}
                 <div className="space-y-6">
-                    <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-brand-grey border border-gray-100">
+                    <div className="relative aspect-square rounded-3xl overflow-hidden bg-brand-grey border border-gray-100">
                         <Image
                             src={product.img}
                             alt={product.name}
@@ -48,7 +48,7 @@ export default function ProductDetailLayout({ product, categorySlug, allProducts
                         />
                     </div>
                     {product.usage && (
-                        <div className="p-10 bg-brand-grey rounded-[2rem] border border-gray-100">
+                        <div className="p-10 bg-brand-grey rounded-2xl border border-gray-100">
                             <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue mb-4 flex items-center gap-2">
                                 <Zap size={14} /> Aplicación Técnica
                             </h3>
@@ -86,7 +86,7 @@ export default function ProductDetailLayout({ product, categorySlug, allProducts
             </section>
 
             {/* PRODUCTOS RELACIONADOS */}
-            <section className="bg-brand-grey py-24 px-6 border-t border-gray-100">
+            <section className="bg-brand-grey py-16 lg:py-20 px-6 border-t border-gray-100">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex justify-between items-end mb-12">
                         <div>
@@ -100,7 +100,7 @@ export default function ProductDetailLayout({ product, categorySlug, allProducts
 
                     <div className="grid md:grid-cols-2 gap-8">
                         {allProducts.map((prod) => (
-                            <Link key={prod.ref} href={`/${categorySlug}/${encodeURIComponent(prod.ref)}`} className="group bg-white rounded-[2rem] p-4 flex items-center gap-6 hover:shadow-xl transition-all border border-transparent hover:border-brand-blue/20">
+                             <Link key={prod.ref} href={`/${categorySlug}/${encodeURIComponent(prod.ref)}`} className="group bg-white rounded-2xl p-4 flex items-center gap-6 hover:shadow-xl transition-all border border-transparent hover:border-brand-blue/20">
                                 <div className="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gray-50">
                                     <Image
                                         src={prod.img}

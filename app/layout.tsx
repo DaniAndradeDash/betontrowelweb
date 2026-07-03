@@ -17,6 +17,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Beton Trowel | Maquinaria Ligera para Construcción",
   description: "Venta y renta de maquinaria ligera y herramienta de acabado para la construcción en México.",
+  openGraph: {
+    title: "Beton Trowel | Maquinaria Ligera para Construcción",
+    description: "Venta y renta de maquinaria ligera y herramienta de acabado para la construcción en México.",
+    locale: "es_MX",
+    type: "website",
+    siteName: "Beton Trowel México",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Beton Trowel | Maquinaria Ligera para Construcción",
+    description: "Venta y renta de maquinaria ligera y herramienta de acabado para la construcción en México.",
+  },
 };
 
 const organizationJsonLd = {

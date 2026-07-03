@@ -9,11 +9,11 @@ const MAIN_IMG =
 export const metadata: Metadata = {
   title: "Compactación | Beton Trowel México",
   description:
-    "Compactadores saltarines y placas vibratorias para compactación de suelos y asfalto. Maquinaria ligera profesional de Beton Trowel en México.",
+    "Compactadores saltarines y placas vibratorias para compactación de suelos y asfalto. Maquinaria ligera profesional de Beton Trowel, distribuida por Equipos y Superficies de México.",
   openGraph: {
     title: "Compactación | Beton Trowel México",
     description:
-      "Compactadores saltarines y placas vibratorias para compactación de suelos y asfalto.",
+      "Compactadores saltarines y placas vibratorias para compactación de suelos y asfalto. Distribuido por Equipos y Superficies de México.",
     locale: "es_MX",
     type: "website",
   },
@@ -23,7 +23,7 @@ export default function CompactacionPage() {
 
   return (
     <div className="flex flex-col">
-      <section className="bg-brand-blue text-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      <section className="bg-brand-blue text-white py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <Image
             src={MAIN_IMG}
@@ -47,9 +47,9 @@ export default function CompactacionPage() {
         </div>
       </section>
 
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+      <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
             {compactadoras.map((p, i) => (
               <Card
                 key={p.id}

@@ -1,8 +1,22 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 const CONTACT_HERO = "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop";
+
+export const metadata: Metadata = {
+  title: "Contacto | Beton Trowel México",
+  description:
+    "Cotizaciones y asesoría técnica en maquinaria ligera para construcción. Equipos y Superficies de México, distribuidor oficial Beton Trowel.",
+  openGraph: {
+    title: "Contacto | Beton Trowel México",
+    description:
+      "Cotizaciones y asesoría técnica en maquinaria ligera para construcción. Equipos y Superficies de México, distribuidor oficial Beton Trowel.",
+    locale: "es_MX",
+    type: "website",
+  },
+};
 
 export default function ContactPage() {
   const icons = [
@@ -39,7 +53,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 lg:py-32 md:py-24 px-6">
+      <section className="py-16 lg:py-24 px-6">
         <div className="max-w-[2560px] mx-auto lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 md:gap-8 gap-16 xl:gap-24">
 

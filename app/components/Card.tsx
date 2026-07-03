@@ -19,7 +19,7 @@ export default function Card({ productRef, name, desc, img, currentSlug }: CardP
                     alt={name}
                     fill
                     sizes="(max-width: 780px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    className="object-contain group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
             </div>
             <div className="p-6">

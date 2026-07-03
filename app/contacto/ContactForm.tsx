@@ -28,7 +28,7 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-brand-grey p-8 sm:p-12 rounded-[2.5rem] border border-gray-100 shadow-2xl shadow-gray-200/50 text-center">
+      <div className="bg-brand-grey p-8 sm:p-12 rounded-3xl border border-gray-100 shadow-2xl shadow-gray-200/50 text-center">
         <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
           <Send size={24} className="text-white" />
         </div>
@@ -50,7 +50,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-brand-grey p-8 sm:p-12 rounded-[2.5rem] border border-gray-100 shadow-2xl shadow-gray-200/50 transition-all hover:shadow-none">
+    <div className="bg-brand-grey p-8 sm:p-12 rounded-3xl border border-gray-100 shadow-2xl shadow-gray-200/50 transition-all hover:shadow-none">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" noValidate>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-2">

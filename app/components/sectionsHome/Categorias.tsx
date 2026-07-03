@@ -36,14 +36,14 @@ export default function Categorias() {
     return (
         <>
             {/* Section 2: Categories */}
-            <section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
+            <section className="py-16 lg:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
                     <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-black mb-2 sm:mb-3 lg:mb-4">Nuestras Especialidades</h2>
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-black mb-4">Nuestras Especialidades</h2>
                         <div className="h-0.5 sm:h-0.5 md:h-0.5 lg:h-0.5 w-16 sm:w-20 md:w-24 lg:w-28 mx-auto bg-brand-blue"></div>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 xl:gap-10">
                         {categories.map((cat, idx) => (
                             <Link
                                 key={idx}

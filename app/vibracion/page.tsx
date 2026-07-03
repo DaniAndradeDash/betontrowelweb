@@ -9,11 +9,11 @@ const MAIN_IMG =
 export const metadata: Metadata = {
   title: "Vibración de Concreto | Beton Trowel México",
   description:
-    "Vibradores de concreto para eliminación de burbujas de aire y consolidación perfecta. Vibradores de mochila, portátiles y reglas vibratorias Beton Trowel.",
+    "Vibradores de concreto para eliminación de burbujas de aire y consolidación perfecta. Vibradores de mochila, portátiles y reglas vibratorias Beton Trowel, distribuidos por Equipos y Superficies de México.",
   openGraph: {
     title: "Vibración de Concreto | Beton Trowel México",
     description:
-      "Vibradores de concreto para eliminación de burbujas de aire y consolidación perfecta.",
+      "Vibradores de concreto para eliminación de burbujas de aire y consolidación perfecta. Distribuido por Equipos y Superficies de México.",
     locale: "es_MX",
     type: "website",
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function VibracionPage() {
   return (
     <div className="flex flex-col">
-      <section className="bg-brand-blue text-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      <section className="bg-brand-blue text-white py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image src={MAIN_IMG} alt="Vibration" fill className="object-cover" />
         </div>
@@ -38,7 +38,7 @@ export default function VibracionPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {vibradores.map((p, i) => (

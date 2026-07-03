@@ -9,9 +9,9 @@ export default function Equipos() {
     return (
         <>
             {/* Section : Equipos (Basada en tu imagen) */}
-            <section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
+            <section className="py-16 lg:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 items-center">
 
                         {/* Cuadrícula de Imágenes (Lado Izquierdo) */}
                         <div className="grid grid-cols-2 gap-4">
@@ -38,8 +38,8 @@ export default function Equipos() {
                             <h3 className="text-brand-blue font-bold tracking-widest uppercase text-sm">
                                 Con sede en Bélgica
                             </h3>
-                            <h2 className="text-4xl md:text-5xl font-extrabold text-brand-black leading-tight uppercase">
-                                Equipos de Acabado y Compactación de concreto
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-black leading-tight">
+                                Equipos de Acabado y Compactación de Concreto
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed">
                                 Beton Trowel se complace en presentarle nuestra amplia gama de equipos.
