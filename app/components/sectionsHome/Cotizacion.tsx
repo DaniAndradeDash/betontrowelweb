@@ -6,9 +6,9 @@ export default function Cotizacion() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div className="bg-brand-blue rounded-3xl p-12 text-white shadow-2xl relative overflow-hidden">
                     <div className="relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">¿Listo para mejorar tu obra con Beton Trowel?</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6">¿Listo para mejorar su obra con Beton Trowel?</h2>
                         <p className="text-xl mb-8 opacity-90">
-                            Cotiza equipos Beton Trowel — venta o renta — con Equipos y Superficies de México, tu distribuidor autorizado.
+                            Cotice equipos Beton Trowel — venta o renta — con Equipos y Superficies de México, su distribuidor autorizado.
                         </p>
                         <Link
                             href="/contacto"

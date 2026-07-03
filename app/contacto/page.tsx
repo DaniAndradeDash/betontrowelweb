@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import ContactForm from "./ContactForm";
-
-const CONTACT_HERO = "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop";
+import contactImg from "@/public/Equipos/OficinaMonterrey.jpeg";
 
 export const metadata: Metadata = {
   title: "Contacto | Beton Trowel México",
@@ -35,7 +34,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-brand-black/80 via-brand-black/40 to-brand-black z-10"></div>
           <Image
-            src={CONTACT_HERO}
+            src={contactImg}
             alt="Beton Trowel Contact"
             fill
             className="object-cover opacity-60 grayscale-[40%]"

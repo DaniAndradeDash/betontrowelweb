@@ -100,7 +100,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Flotadora Ligera",
         ref: "BT350095",
         desc: "Flotadora Ligera  36\"90 X 20cm(SOLO FLOTADORA) ",
-        img: "/herramientas/Big-blue-complete-2048x2048.jpeg"
+        img: "/herramientas/Big-blue-complete-2048x2048.jpeg",
+        usage: 'Para acabado superficial de concreto fresco. Ideal para losas de tamaño mediano.',
+        specs: [
+            { label: 'Ancho', value: '90 cm' },
+            { label: 'Largo', value: '20 cm' },
+            { label: 'Material', value: 'Aluminio/Magnesio' },
+            { label: 'Tipo', value: 'Flotadora Ligera' }
+        ]
     },
     {
         id:1,
@@ -108,7 +115,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Flotadora de Canal",
         ref: "BT101034C",
         desc: "2.450m X 15cm Completa con cabezal, 3 extensiones de aluminio clip de 1.80m cada uno",
-        img: "/herramientas/Bullfloat-2048x2048.jpeg"
+        img: "/herramientas/Bullfloat-2048x2048.jpeg",
+        usage: 'Para nivelación inicial de concreto fresco en canales y losas de gran superficie.',
+        specs: [
+            { label: 'Longitud', value: '2.45 m' },
+            { label: 'Ancho', value: '15 cm' },
+            { label: 'Extensiones', value: '3 de 1.80 m' },
+            { label: 'Material', value: 'Aluminio' }
+        ]
     },
     {
         id:2,
@@ -116,7 +130,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Corrector Check Rod",
         ref: "BT101035C",
         desc: "3.0m , 2\" de alto x 4\" de ancho. Completo, incluye cabezal de balero para herramienta profesional, 3 extensiones de aluminio de 1.83m cada uno y tensores(outriggers) ",
-        img: "/herramientas/Check-Rod-2048x2048.jpeg"
+        img: "/herramientas/Check-Rod-2048x2048.jpeg",
+        usage: 'Para corrección y nivelación precisa de concreto fresco en losas de gran formato.',
+        specs: [
+            { label: 'Longitud', value: '3.0 m' },
+            { label: 'Alto', value: '2"' },
+            { label: 'Ancho', value: '4"' },
+            { label: 'Extensiones', value: '3 de 1.83 m' }
+        ]
     },
     {
         id:3,
@@ -124,7 +145,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Corrector Bumpcutter completo",
         ref: "BT101026C",
         desc: "3.0m, 4\" de alto x 2\" de ancho. Completo, incluye cabezal de balero para herramienta profesional, 3 extensiones de aluminio de 1.83m cada uno, y tensores(outriggers)",
-        img: "/herramientas/BTSPRAY06L10La-2048x2048.jpeg"
+        img: "/herramientas/BTSPRAY06L10La-2048x2048.jpeg",
+        usage: 'Para eliminar alabeos y crestas en concreto fresco. Ideal para losas de alto tráfico.',
+        specs: [
+            { label: 'Longitud', value: '3.0 m' },
+            { label: 'Alto', value: '4"' },
+            { label: 'Ancho', value: '2"' },
+            { label: 'Extensiones', value: '3 de 1.83 m' }
+        ]
     },
     {
         id:4,
@@ -132,7 +160,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Llana tipo fresno",
         ref: "BT790074",
         desc: "Fresno 1.20m X 12cm (solo llana)",
-        img: "/herramientas/Bullfloat-2048x2048.jpeg"
+        img: "/herramientas/Bullfloat-2048x2048.jpeg",
+        usage: 'Para acabado manual de superficies de concreto en áreas pequeñas y difíciles.',
+        specs: [
+            { label: 'Largo', value: '1.20 m' },
+            { label: 'Ancho', value: '12 cm' },
+            { label: 'Material', value: 'Magnesio' },
+            { label: 'Tipo', value: 'Llana Fresno' }
+        ]
     },
     {
         id:5,
@@ -140,7 +175,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Flota Manual de Magnesio",
         ref: "CT131",
         desc: "Flota Manual de Magnesio 20\" x 3-1/4\" Mango Plastico",
-        img: "/herramientas/master-square-end-trowel-bleu-300x293.jpeg"
+        img: "/herramientas/master-square-end-trowel-bleu-300x293.jpeg",
+        usage: 'Para acabado manual fino de concreto. Ideal para detalles y esquinas.',
+        specs: [
+            { label: 'Largo', value: '20"' },
+            { label: 'Ancho', value: '3-1/4"' },
+            { label: 'Material', value: 'Magnesio' },
+            { label: 'Mango', value: 'Plástico' }
+        ]
     }
 ];
 

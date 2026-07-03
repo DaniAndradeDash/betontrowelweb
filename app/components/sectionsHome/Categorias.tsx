@@ -61,7 +61,7 @@ export default function Categorias() {
                                     <div className="absolute inset-0 bg-black/40 backdrop-blur-xs bg-gradient-to-t from-brand-black via-transparent to-transparent"></div>
                                     <div className="absolute bottom-0 left-0 p-6">
                                         <h3 className="text-xl font-bold text-white mb-2">{cat.title}</h3>
-                                        <p className="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <p className="text-gray-300 text-sm mb-4">
                                             {cat.desc}
                                         </p>
                                         <span className="text-brand-blue font-semibold text-sm inline-flex items-center gap-2">

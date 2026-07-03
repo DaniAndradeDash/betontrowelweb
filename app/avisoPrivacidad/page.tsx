@@ -123,7 +123,7 @@ const AvisoPrivacidad = () => {
                     {/* Bloque de Contacto */}
                     <footer className="bg-brand-black rounded-2xl p-6 sm:p-8 text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
                         <div className="space-y-1">
-                            <h3 className="text-sm font-bold tracking-tight">¿Tienes dudas sobre tus datos?</h3>
+                            <h3 className="text-sm font-bold tracking-tight">¿Tiene dudas sobre sus datos?</h3>
                             <p className="text-xs text-gray-400 font-light">Ponte en contacto directo con nuestra área de privacidad.</p>
                         </div>
                         <a 

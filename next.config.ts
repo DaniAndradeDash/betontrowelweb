@@ -1,21 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
+  async redirects() {
+    return [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
+        source: "/:category(acabado-de-concreto|compactacion|vibracion|herramientas-de-concreto)/:id(\\d+)",
+        destination: "/:category",
+        permanent: true,
       },
-      {
-        protocol: 'https',
-        hostname: 'via.placeholder.com',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    ];
   },
 };
 

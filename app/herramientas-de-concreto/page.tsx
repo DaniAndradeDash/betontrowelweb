@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Card from "../components/Card";
 import { herramientasConcreto } from "@/data/Productos";
-
-const MAIN_IMG =
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
+import mainImg from "@/public/herramientas/tools.jpeg";
 
 export const metadata: Metadata = {
   title: "Herramientas de Concreto | Beton Trowel México",
@@ -25,7 +23,7 @@ export default function HerramientasPage() {
       <section className="bg-brand-blue text-white py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src={MAIN_IMG}
+            src={mainImg}
             alt="Concrete Tools"
             fill
             className="object-cover"
@@ -56,6 +54,7 @@ export default function HerramientasPage() {
                 desc={p.desc}
                 img={p.img}
                 currentSlug="herramientas-de-concreto"
+                categoryName="Herramientas"
               />
             ))}
           </div>

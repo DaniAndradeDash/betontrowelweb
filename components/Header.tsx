@@ -26,8 +26,8 @@ export default function Header() {
                 className="h-12 w-auto object-contain drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]"
               />
             </Link>
-            <div className="h-8 w-px bg-white/20 hidden md:block"></div>
-            <Link href="/" className="hidden md:flex items-center">
+            <div className="h-8 w-px bg-white/20 block"></div>
+            <Link href="/" className="flex items-center">
               <Image
                 src={EQUIPOS_SUPERFICIES_MEXICO_IMG}
                 alt="Equipos y Superficies de México Logo"

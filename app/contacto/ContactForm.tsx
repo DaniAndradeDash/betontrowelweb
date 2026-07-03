@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Send } from "lucide-react";
 import { contactFormSchema, type ContactFormData } from "./contactFormSchema";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -18,10 +19,17 @@ export default function ContactForm() {
     resolver: zodResolver(contactFormSchema),
   });
 
+  const FORM_ENDPOINT = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "";
+
   const onSubmit = async (data: ContactFormData) => {
-    // Simula el envío (sitio estático sin API)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Form data:", data);
+    if (FORM_ENDPOINT) {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Error al enviar el formulario");
+    }
     reset();
     setIsSubmitted(true);
   };
@@ -29,15 +37,22 @@ export default function ContactForm() {
   if (isSubmitted) {
     return (
       <div className="bg-brand-grey p-8 sm:p-12 rounded-3xl border border-gray-100 shadow-2xl shadow-gray-200/50 text-center">
-        <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
           <Send size={24} className="text-white" />
         </div>
+        <Image
+          src="/logos/EquiposySuperficiesGrande.webp"
+          alt="Equipos y Superficies de México"
+          width={140}
+          height={40}
+          className="h-8 w-auto object-contain mx-auto mb-6 opacity-70"
+        />
         <h3 className="text-2xl font-bold text-brand-black mb-2">
           ¡Mensaje Enviado!
         </h3>
         <p className="text-gray-500 font-light mb-8 max-w-md mx-auto">
           Gracias por contactarnos. Un asesor de Equipos y Superficies de México
-          te responderá a la brevedad.
+          le responderá a la brevedad.
         </p>
         <button
           onClick={() => setIsSubmitted(false)}

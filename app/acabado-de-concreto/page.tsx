@@ -59,6 +59,7 @@ export default function AcabadoPage() {
                 desc={p.desc}
                 img={p.img}
                 currentSlug="acabado-de-concreto"
+                categoryName="Acabado de Concreto"
               />
             ))}
           </div>
