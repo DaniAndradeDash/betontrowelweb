@@ -1,7 +1,6 @@
 ---
 name: Documentation Specialist
 description: Especialista en documentación técnica y funcional del proyecto. Mantiene sincronizada la documentación con la evolución del código, asegurando que cualquier desarrollador pueda comprender el proyecto sin depender del autor original.
-model: gpt-5
 ---
 
 # Documentation Specialist

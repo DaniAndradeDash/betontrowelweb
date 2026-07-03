@@ -1,9 +1,23 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Card from "../components/Card";
 import { herramientasConcreto } from "@/data/Productos";
 
 const MAIN_IMG =
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
+
+export const metadata: Metadata = {
+  title: "Herramientas de Concreto | Beton Trowel México",
+  description:
+    "Herramientas manuales y flotadoras para acabado de concreto de alta precisión. Llanas, flotadoras, bumpcutters y más. Beton Trowel en México.",
+  openGraph: {
+    title: "Herramientas de Concreto | Beton Trowel México",
+    description:
+      "Herramientas manuales y flotadoras para acabado de concreto de alta precisión.",
+    locale: "es_MX",
+    type: "website",
+  },
+};
 
 export default function HerramientasPage() {
   return (
@@ -22,9 +36,10 @@ export default function HerramientasPage() {
             Herramientas de <span className="text-brand-black">Concreto</span>
           </h1>
           <p className="text-xl text-white max-w-2xl">
-            Una amplia gama de herramientas para concreto en diferentes etapas
-            de construcción y reparación de concreto, para trabajos planos y
-            acabados manuales de superficies.
+            Beton Trowel presenta una amplia gama de herramientas para concreto
+            en diferentes etapas de construcción y reparación, para trabajos
+            planos y acabados manuales de superficies. Distribuido en México por
+            <strong> Equipos y Superficies de México</strong>.
           </p>
         </div>
       </section>
@@ -36,7 +51,7 @@ export default function HerramientasPage() {
             {herramientasConcreto.map((p, i) => (
               <Card
                 key={p.id}
-                id={p.id}
+                productRef={p.ref}
                 name={p.name}
                 desc={p.desc}
                 img={p.img}

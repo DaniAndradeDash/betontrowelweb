@@ -1,9 +1,23 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Card from "../components/Card";
 import { vibradores } from "@/data/Productos";
 
 const MAIN_IMG =
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
+
+export const metadata: Metadata = {
+  title: "Vibración de Concreto | Beton Trowel México",
+  description:
+    "Vibradores de concreto para eliminación de burbujas de aire y consolidación perfecta. Vibradores de mochila, portátiles y reglas vibratorias Beton Trowel.",
+  openGraph: {
+    title: "Vibración de Concreto | Beton Trowel México",
+    description:
+      "Vibradores de concreto para eliminación de burbujas de aire y consolidación perfecta.",
+    locale: "es_MX",
+    type: "website",
+  },
+};
 
 export default function VibracionPage() {
   return (
@@ -17,8 +31,9 @@ export default function VibracionPage() {
             Vibración de <span className="text-brand-black">Concreto</span>
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Evite grietas y porosidades. Nuestros equipos de vibración aseguran
-            una consolidación perfecta del concreto.
+            Los vibradores de concreto Beton Trowel eliminan burbujas de aire y
+            aseguran una consolidación perfecta del concreto. Distribuido en
+            México por <strong>Equipos y Superficies de México</strong>.
           </p>
         </div>
       </section>
@@ -29,7 +44,7 @@ export default function VibracionPage() {
             {vibradores.map((p, i) => (
               <Card
                 key={p.id}
-                id={p.id}
+                productRef={p.ref}
                 name={p.name}
                 desc={p.desc}
                 img={p.img}

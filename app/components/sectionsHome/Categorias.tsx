@@ -5,8 +5,6 @@ import tools from "@/public/Equipos/tools.jpeg";
 import compaction from "@/public/Equipos/compaction.jpeg";
 import vibration from "@/public/Equipos/vibration.jpeg";
 
-const MAIN_IMG = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
-
 export default function Categorias() {
     const categories = [
         {
@@ -38,7 +36,7 @@ export default function Categorias() {
     return (
         <>
             {/* Section 2: Categories */}
-            < section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white" >
+            <section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
                     <div className="text-center mb-6 sm:mb-8 lg:mb-12">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-black mb-2 sm:mb-3 lg:mb-4">Nuestras Especialidades</h2>
@@ -78,7 +76,7 @@ export default function Categorias() {
                         ))}
                     </div>
                 </div>
-            </section >
+            </section>
         </>
     )
 };

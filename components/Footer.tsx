@@ -1,30 +1,31 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { FaInstagram, FaFacebookF } from "react-icons/fa6";
-
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Acabado de concreto", href: "/acabado-de-concreto" },
-  { name: "Herramientas de concreto", href: "/herramientas-de-concreto" },
-  { name: "Compactación", href: "/compactacion" },
-  { name: "Vibración", href: "/vibracion" },
-  { name: "Contacto", href: "/contacto" },
-];
+import { navLinks } from "@/constants/navigation";
 
 const BETON_TROWEL_IMG = "/logos/BETON-TROWEL-LOGO-SITE-ICON.png";
+const EQUIPOS_SUPERFICIES_MEXICO_IMG = "/logos/EquiposySuperficiesGrande.webp";
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+    </svg>
+  );
+}
 
 export default function Footer() {
-  const [year, setYear] = useState<number>(0);
-
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-  }, []);
+  const year = new Date().getFullYear();
 
   return (
-    <section className="bg-[#1A1A1A] text-white pt-20 pb-10 border-t border-gray-800">
+    <section className="bg-brand-black text-white pt-20 pb-10 border-t border-gray-800">
       <div className="max-w-[2560px] mx-auto px-6 sm:px-12 lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-14">
 
@@ -37,6 +38,13 @@ export default function Footer() {
               height={50}
               className="h-24 w-auto object-contain"
             />
+            <Image
+              src={EQUIPOS_SUPERFICIES_MEXICO_IMG}
+              alt="Equipos y Superficies de México"
+              width={180}
+              height={60}
+              className="h-16 w-auto object-contain brightness-0 invert"
+            />
             <p className="text-gray-400 text-sm md:text-base font-light max-w-sm leading-relaxed">
               Especialistas en maquinaria ligera y herramientas de acabado para la construcción.
               Calidad belga y eficiencia para tus proyectos en México.
@@ -45,13 +53,13 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="md:col-span-4">
-            <h3 className="text-[24px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Navegación</h3>
+            <h3 className="text-2xl uppercase tracking-[0.3em] font-bold text-brand-blue mb-8">Navegación</h3>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-[#00AEEF] transition-colors text-sm font-light"
+                    className="text-gray-400 hover:text-brand-blue transition-colors text-sm font-light"
                   >
                     {link.name}
                   </Link>
@@ -62,11 +70,11 @@ export default function Footer() {
 
           {/* Contact & Social */}
           <div className="md:col-span-4">
-            <h3 className="text-[24px] uppercase tracking-[0.3em] font-bold text-[#00AEEF] mb-8">Contacto</h3>
+            <h3 className="text-2xl uppercase tracking-[0.3em] font-bold text-brand-blue mb-8">Contacto</h3>
             <ul className="space-y-2 text-sm text-gray-400 mb-8 font-light">
               <li>Email: c.andrade@equiposysuperficiesdemexico.com</li>
-              <li>Telefono San Luis Potosí: +52 444 256 7853</li>
-              <li>Telefono Monterrey: +52 81 1018 0615</li>
+              <li>Teléfono San Luis Potosí: +52 444 256 7853</li>
+              <li>Teléfono Monterrey: +52 81 1018 0615</li>
               <li>Ubicación: Mariano Escobedo 1456-Norte, Treviño, 64570 Monterrey, N.L.</li>
             </ul>
 
@@ -76,16 +84,18 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-3 rounded-full bg-white/5 text-gray-400 hover:bg-[#1877F2] hover:text-white hover:-translate-y-1 transition-all duration-300"
+                aria-label="Facebook"
               >
-                <FaFacebookF size={18} />
+                <FacebookIcon />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-3 rounded-full bg-white/5 text-gray-400 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:-translate-y-1 transition-all duration-300"
+                aria-label="Instagram"
               >
-                <FaInstagram size={18} />
+                <InstagramIcon />
               </a>
             </div>
           </div>
@@ -94,7 +104,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-[10px] uppercase tracking-widest">
-            © {year || "2026"} BETON TROWEL. TODOS LOS DERECHOS RESERVADOS.
+            © {year} BETON TROWEL. TODOS LOS DERECHOS RESERVADOS.
           </p>
           <div className="flex items-center gap-4 opacity-50 hover:opacity-100 transition-opacity">
             <Image

@@ -9,7 +9,7 @@ export default function Equipos() {
     return (
         <>
             {/* Section : Equipos (Basada en tu imagen) */}
-            < section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white" >
+            <section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 gap-8 xl:gap-12 items-center">
 
@@ -42,7 +42,7 @@ export default function Equipos() {
                                 Equipos de Acabado y Compactación de concreto
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                BETON TROWEL se complace en presentarle nuestra amplia gama de equipos.
+                                Beton Trowel se complace en presentarle nuestra amplia gama de equipos.
                                 No comprometemos la calidad: utilizamos materiales de alta gama combinados con piezas
                                 de ingeniería de precisión para garantizar que su inversión brinde una vida útil sin problemas.
                             </p>
@@ -63,7 +63,7 @@ export default function Equipos() {
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
         </>
     )
 };

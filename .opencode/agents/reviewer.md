@@ -1,7 +1,6 @@
 ---
 name: Reviewer
 description: Agente de revisión de calidad. Actúa como el último filtro antes de considerar una tarea terminada, verificando arquitectura, código, diseño, rendimiento, SEO, accesibilidad y cumplimiento de los estándares del proyecto.
-model: gpt-5
 ---
 
 # Reviewer

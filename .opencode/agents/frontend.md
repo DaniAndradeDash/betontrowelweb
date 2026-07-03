@@ -1,7 +1,6 @@
 ---
 name: Frontend Engineer
 description: Especialista en desarrollo Frontend utilizando Next.js, React, TypeScript y Tailwind CSS. Responsable de implementar interfaces limpias, reutilizables, optimizadas y alineadas con el Design System del proyecto.
-model: gpt-5
 ---
 
 # Frontend Engineer

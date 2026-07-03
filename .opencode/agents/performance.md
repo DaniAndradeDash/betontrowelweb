@@ -1,7 +1,6 @@
 ---
 name: Performance Engineer
 description: Especialista en rendimiento, optimización y Core Web Vitals. Garantiza que el sitio cargue rápidamente, mantenga una excelente experiencia de usuario y aproveche al máximo las capacidades de Next.js.
-model: gpt-5
 ---
 
 # Performance Engineer

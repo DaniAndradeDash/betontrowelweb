@@ -1,13 +1,25 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Card from "../components/Card";
 import { compactadoras } from "@/data/Productos";
-import portadaAcabado from "@/public/Acabados/PortadaAcabados.jpeg";
 
 const MAIN_IMG =
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop";
 
+export const metadata: Metadata = {
+  title: "Compactación | Beton Trowel México",
+  description:
+    "Compactadores saltarines y placas vibratorias para compactación de suelos y asfalto. Maquinaria ligera profesional de Beton Trowel en México.",
+  openGraph: {
+    title: "Compactación | Beton Trowel México",
+    description:
+      "Compactadores saltarines y placas vibratorias para compactación de suelos y asfalto.",
+    locale: "es_MX",
+    type: "website",
+  },
+};
+
 export default function CompactacionPage() {
-  //https://www.betontrowel.com/wp-content/uploads/2024/12/compaction.jpg
 
   return (
     <div className="flex flex-col">
@@ -26,11 +38,11 @@ export default function CompactacionPage() {
             Compactación de <span className="text-brand-black">Pisos</span>
           </h1>
           <p className="text-xl text-white max-w-2xl">
-            Los compactadores de placas BT son reconocidos como el estándar de
-            la industria para compactar suelos granulares y asfalto. Miles de
-            usuarios satisfechos saben que los compactadores de placas BT tienen
-            el máximo rendimiento, fácil manejo, bajo mantenimiento y larga vida
-            útil.
+            Beton Trowel ofrece compactadores de placas BT, reconocidos como el
+            estándar de la industria para compactar suelos granulares y asfalto.
+            Miles de usuarios satisfechos saben que los compactadores de placas BT
+            tienen el máximo rendimiento, fácil manejo, bajo mantenimiento y larga
+            vida útil. Distribuido en México por <strong>Equipos y Superficies de México</strong>.
           </p>
         </div>
       </section>
@@ -41,7 +53,7 @@ export default function CompactacionPage() {
             {compactadoras.map((p, i) => (
               <Card
                 key={p.id}
-                id={p.id}
+                productRef={p.ref}
                 name={p.name}
                 desc={p.desc}
                 img={p.img}

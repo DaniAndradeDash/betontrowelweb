@@ -1,7 +1,6 @@
 ---
 name: Forms Specialist
 description: Especialista en formularios, validaciones y experiencia de usuario. Diseña e implementa formularios modernos, accesibles, seguros y optimizados utilizando React Hook Form, Zod y las mejores prácticas de Next.js.
-model: gpt-5
 ---
 
 # Forms Specialist

@@ -23,6 +23,8 @@ export interface HerramientasConcreto {
   ref: string;
   desc: string;
   img: string;
+  usage?: string;
+  specs?: { label: string; value: string }[];
 }
 
 export interface HerramientasRelevantes {
@@ -66,4 +68,20 @@ export interface VibradoresRelevant {
   name: string;
   category: string;
   img: string;
+}
+
+/**
+ * Tipo unificado para el componente ProductDetailLayout.
+ * Todos los tipos de producto (MachineAcabado, Compactadoras,
+ * HerramientasConcreto, Vibradores) tienen exactamente esta forma.
+ */
+export interface ProductDetail {
+  id: number;
+  category: string;
+  name: string;
+  ref: string;
+  desc: string;
+  img: string;
+  usage?: string;
+  specs?: { label: string; value: string }[];
 }

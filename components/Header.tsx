@@ -3,15 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Acabado de concreto", href: "/acabado-de-concreto" },
-  { name: "Herramientas de concreto", href: "/herramientas-de-concreto" },
-  { name: "Compactación", href: "/compactacion" },
-  { name: "Vibración", href: "/vibracion" },
-  { name: "Contacto", href: "/contacto" },
-];
+import { navLinks } from "@/constants/navigation";
 
 const BETON_TROWEL_IMG = "/logos/BETON-TROWEL-LOGO-SITE-ICON.png";
 const EQUIPOS_SUPERFICIES_MEXICO_IMG = "/logos/EquiposySuperficiesGrande.webp";
@@ -68,9 +60,12 @@ export default function Header() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white focus:outline-none"
+              aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              className="text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-md"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -84,7 +79,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-brand-black border-b border-white/10">
+        <div id="mobile-menu" className="md:hidden bg-brand-black border-b border-white/10">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
