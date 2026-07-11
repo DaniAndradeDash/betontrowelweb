@@ -107,7 +107,9 @@ export default function ProductDetailLayout({ product, categorySlug, allProducts
 
                     <div className="flex flex-col sm:flex-row gap-4">
                         <a href="https://wa.me/528110180615" className="flex-1 bg-brand-black text-white px-8 py-6 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-brand-blue transition-all duration-500 shadow-2xl active:scale-95">
-                            <MessageCircle size={22} /> Cotizar WhatsApp
+                            <MessageCircle size={42} /> Cotizar WhatsApp
+                            <br />
+                            Para  mas información  solicita  la ficha técnica
                         </a>
                     </div>
                 </div>
