@@ -88,7 +88,7 @@ export default function Footer() {
 
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100058609639274"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-3 rounded-full bg-white/5 text-gray-400 hover:bg-brand-blue hover:text-white hover:-translate-y-1 transition-all duration-300"
@@ -97,7 +97,7 @@ export default function Footer() {
                 <FacebookIcon />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/equiposysuperficiesdemexico/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-3 rounded-full bg-white/5 text-gray-400 hover:bg-brand-blue hover:text-white hover:-translate-y-1 transition-all duration-300"
