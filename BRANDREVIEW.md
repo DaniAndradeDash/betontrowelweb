@@ -16,17 +16,17 @@ El sitio logra transmitir que Beton Trowel es una marca de maquinaria profesiona
 
 ## 2. Fortalezas
 
-| Aspecto | Detalle |
-|---|---|
-| **Header: jerarquía correcta** | Beton Trowel aparece primero (izquierda), separador visual, luego Equipos y Superficies. Correcto. |
-| **Footer: marca de producto primero** | Logo de Beton Trowel arriba, Equipos y Superficies debajo. La descripción textual dice "Calidad belga...". Correcto. |
-| **Uso de tokens de color** | Reemplazo de hex hardcodeados por `brand-blue`, `brand-black`, `brand-grey`. Consistencia visual garantizada. |
-| **Contacto: tono profesional** | "Servicio con Equipos y superficies de México" + link a su web. Buena asociación sin competir. |
+| Aspecto                                               | Detalle                                                                                                                              |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Header: jerarquía correcta**                        | Beton Trowel aparece primero (izquierda), separador visual, luego Equipos y Superficies. Correcto.                                   |
+| **Footer: marca de producto primero**                 | Logo de Beton Trowel arriba, Equipos y Superficies debajo. La descripción textual dice "Calidad belga...". Correcto.                 |
+| **Uso de tokens de color**                            | Reemplazo de hex hardcodeados por `brand-blue`, `brand-black`, `brand-grey`. Consistencia visual garantizada.                        |
+| **Contacto: tono profesional**                        | "Servicio con Equipos y superficies de México" + link a su web. Buena asociación sin competir.                                       |
 | **Detalle de producto: Beton Trowel es protagonista** | Las páginas de producto se centran en la máquina, su ref, specs técnicas. Sin menciones innecesarias al distribuidor que distraigan. |
-| **JSON-LD correcto** | Organization = "Equipos y Superficies de México" con alternateName "Beton Trowel México". Relación clara. |
-| **Aviso de privacidad** | "Equipos y Superficies de México, comercialmente conocido como Equipos y Superficies" es el responsable. Correcto legalmente. |
-| **Footer convertido a Server Component** | Mejora de rendimiento. Ya no depende de state/client para el año. |
-| **SEO en páginas de producto** | `generateMetadata` con `${product.name} | Beton Trowel México`. Posiciona correctamente al fabricante. |
+| **JSON-LD correcto**                                  | Organization = "Equipos y Superficies de México" con alternateName "Beton Trowel México". Relación clara.                            |
+| **Aviso de privacidad**                               | "Equipos y Superficies de México, comercialmente conocido como Equipos y Superficies" es el responsable. Correcto legalmente.        |
+| **Footer convertido a Server Component**              | Mejora de rendimiento. Ya no depende de state/client para el año.                                                                    |
+| **SEO en páginas de producto**                        | `generateMetadata` con `${product.name}                                                                                              | Beton Trowel México`. Posiciona correctamente al fabricante. |
 
 ---
 
@@ -43,14 +43,18 @@ El sitio logra transmitir que Beton Trowel es una marca de maquinaria profesiona
 ```
 
 **Problemas:**
+
 - "Y" en mayúsculas dentro de una oración en español no es correcto. Debe ser minúscula.
 - Beton Trowel es una empresa belga — no tiene "sede" en México. Equipos y Superficies de México es quien tiene oficinas en Monterrey y San Luis Potosí. **La redacción actual mezcla la identidad del fabricante con la del distribuidor de forma imprecisa.**
 
 **Recomendación:** Cambiar a:
+
 ```
 <span className="text-brand-blue">Distribuido en Monterrey, NL y SLP.</span>
 ```
+
 o
+
 ```
 <span className="text-brand-blue">con presencia en Monterrey, NL y San Luis Potosí.</span>
 ```
@@ -71,6 +75,7 @@ Párrafo: "Con sede en Bélgica, cerca de Amberes..."
 **Respuesta correcta:** Beton Trowel tiene sede en Bélgica. Equipos y Superficies de México tiene oficinas en Monterrey y SLP. El mensaje debe reflejar esta distinción.
 
 **Recomendación:** Reformular el H1 para que no afirme que Beton Trowel tiene sede en México. Ejemplo:
+
 ```
 Beton Trowel México, <br />
 <span className="text-brand-blue">distribuido en Monterrey, NL y SLP.</span>
@@ -92,17 +97,17 @@ Un botón deshabilitado con tooltip "Próximamente disponible" en el Hero princi
 
 ---
 
-#### 3.4 "Hormigón" vs "Concreto"
+#### 3.4 "concreto" vs "Concreto"
 
 **Archivo:** `app/components/sectionsHome/HeroAction.tsx`, línea 76
 
 ```
-"especialistas en equipos de compactación y acabado de hormigón de alta calidad"
+"especialistas en equipos de compactación y acabado de concreto de alta calidad"
 ```
 
-**Problema:** En México no se dice "hormigón", se dice **"concreto"**. El resto del sitio usa "concreto" consistentemente. Esta es una inconsistencia grave que delata falta de adaptación al mercado local.
+**Problema:** En México no se dice "concreto", se dice **"concreto"**. El resto del sitio usa "concreto" consistentemente. Esta es una inconsistencia grave que delata falta de adaptación al mercado local.
 
-**Recomendación:** Cambiar "hormigón" por "concreto".
+**Recomendación:** Cambiar "concreto" por "concreto".
 
 ---
 
@@ -115,6 +120,7 @@ Un botón deshabilitado con tooltip "Próximamente disponible" en el Hero princi
 "Bienvenido a Beton Trowel BV" — usar la razón social belga "BV" (Besloten Vennootschap) en el mercado mexicano no aporta valor y puede confundir. La marca se presenta como "Beton Trowel México".
 
 **Recomendación:** Cambiar a:
+
 ```
 "Bienvenido a Beton Trowel México. Somos especialistas en equipos de compactación y acabado de concreto de alta calidad. Con sede en Bélgica..."
 ```
@@ -139,12 +145,12 @@ Para un distribuidor en México que vende en el mercado mexicano, "envío global
 
 En la mayoría de las páginas de categoría, las meta descriptions solo mencionan a Beton Trowel:
 
-| Página | ¿Menciona a Equipos y Superficies? |
-|---|---|
-| `acabado-de-concreto` | ✅ Sí |
-| `herramientas-de-concreto` | ❌ No |
-| `compactacion` | ❌ No |
-| `vibracion` | ❌ No |
+| Página                     | ¿Menciona a Equipos y Superficies? |
+| -------------------------- | ---------------------------------- |
+| `acabado-de-concreto`      | ✅ Sí                              |
+| `herramientas-de-concreto` | ❌ No                              |
+| `compactacion`             | ❌ No                              |
+| `vibracion`                | ❌ No                              |
 
 **Recomendación:** Agregar "Distribuido por Equipos y Superficies de México" en todas las meta descriptions para reforzar el posicionamiento del distribuidor en buscadores.
 
@@ -153,6 +159,7 @@ En la mayoría de las páginas de categoría, las meta descriptions solo mencion
 #### 3.8 Poco refuerzo textual del distribuidor en páginas de categoría
 
 Equipos y Superficies de México solo se menciona textualmente en:
+
 - Header (logo)
 - Footer (logo + texto)
 - Página de contacto
@@ -162,6 +169,7 @@ Equipos y Superficies de México solo se menciona textualmente en:
 En las demás páginas de categoría (compactación, herramientas, vibración), **no hay una mención explícita** de que Equipos y Superficies de México es el distribuidor.
 
 **Recomendación:** Agregar una línea sutil al final del hero de cada categoría:
+
 ```
 Distribuido en México por Equipos y Superficies de México.
 ```
@@ -189,12 +197,12 @@ Estos errores tipográficos menores dañan la percepción de profesionalismo en 
 
 En el sitio se mezclan tratamientos:
 
-| Ubicación | Tratamiento |
-|---|---|
-| HeroAction (descripción) | "tu inversión", "tus proyectos" |
-| Equipos.tsx | "su inversión", "su capital" (formal) |
-| Aviso de privacidad | "usted" (formal) |
-| ContactForm | "tu" implícito en "Describa" (formal, imperativo) |
+| Ubicación                | Tratamiento                                       |
+| ------------------------ | ------------------------------------------------- |
+| HeroAction (descripción) | "tu inversión", "tus proyectos"                   |
+| Equipos.tsx              | "su inversión", "su capital" (formal)             |
+| Aviso de privacidad      | "usted" (formal)                                  |
+| ContactForm              | "tu" implícito en "Describa" (formal, imperativo) |
 
 Para un sitio B2B dirigido a constructoras, contratistas e ingenieros, el tratamiento formal ("usted") transmite más profesionalismo.
 
@@ -216,6 +224,7 @@ export const metadata: Metadata = {
 El layout raíz solo exporta `title` y `description`. Para cumplir con SEO_GUIDE.md, debería incluir `openGraph` y `twitter` básicos.
 
 **Recomendación:** Agregar:
+
 ```typescript
 openGraph: {
   title: "Beton Trowel | Maquinaria Ligera para Construcción",
@@ -240,10 +249,12 @@ twitter: {
 La página de contacto no exporta `metadata`, por lo que hereda la del layout raíz. Esto hace que el title sea genérico y no específico para la página de contacto.
 
 **Recomendación:** Agregar:
+
 ```typescript
 export const metadata: Metadata = {
   title: "Contacto | Beton Trowel México",
-  description: "Cotizaciones y asesoría técnica en maquinaria ligera para construcción. Equipos y Superficies de México, distribuidor oficial Beton Trowel.",
+  description:
+    "Cotizaciones y asesoría técnica en maquinaria ligera para construcción. Equipos y Superficies de México, distribuidor oficial Beton Trowel.",
 };
 ```
 
@@ -254,6 +265,7 @@ export const metadata: Metadata = {
 #### 3.13 "BETON TROWEL" en ALL CAPS dentro de texto corrido
 
 **Archivos:**
+
 - `app/components/sectionsHome/Equipos.tsx`, línea 45
 - `app/acabado-de-concreto/page.tsx`, línea 39
 
@@ -270,6 +282,7 @@ BETON TROWEL en conjunto con Equipos y Superficies de México presentan...
 En el resto del sitio (Hero, About, Footer, Header, meta descriptions) la marca se escribe correctamente como "Beton Trowel" con capitalización normal. El ALL CAPS en medio de un párrafo se percibe como "gritar" y rompe la fluidez de lectura. Además, es inconsistentente con la propia identidad visual de Beton Trowel (cuyo logo usa "Beton Trowel" con capitalización estándar, no todo en mayúsculas).
 
 **Recomendación:** Cambiar a capitalización normal:
+
 ```tsx
 Beton Trowel se complace en presentarle nuestra amplia gama de equipos.
 Beton Trowel, en conjunto con Equipos y Superficies de México, presenta...
@@ -280,22 +293,24 @@ Beton Trowel, en conjunto con Equipos y Superficies de México, presenta...
 #### 3.14 Tres de cuatro categorías no mencionan a Beton Trowel en su hero
 
 **Archivos:**
+
 - `app/compactacion/page.tsx`
 - `app/vibracion/page.tsx`
 - `app/herramientas-de-concreto/page.tsx`
 
 **Problema:** De las 4 páginas de categoría, solo `acabado-de-concreto/page.tsx` menciona explícitamente a Beton Trowel en la descripción del hero:
 
-| Página | ¿Menciona Beton Trowel? | Texto del hero |
-|---|---|---|
-| `acabado-de-concreto` | ✅ Sí | "BETON TROWEL en conjunto con Equipos y Superficies..." |
-| `compactacion` | ❌ No | "Los compactadores de placas BT son reconocidos..." (genérico) |
-| `vibracion` | ❌ No | "Evite grietas y porosidades..." (genérico) |
-| `herramientas-de-concreto` | ❌ No | "Una amplia gama de herramientas para concreto..." (genérico) |
+| Página                     | ¿Menciona Beton Trowel? | Texto del hero                                                 |
+| -------------------------- | ----------------------- | -------------------------------------------------------------- |
+| `acabado-de-concreto`      | ✅ Sí                   | "BETON TROWEL en conjunto con Equipos y Superficies..."        |
+| `compactacion`             | ❌ No                   | "Los compactadores de placas BT son reconocidos..." (genérico) |
+| `vibracion`                | ❌ No                   | "Evite grietas y porosidades..." (genérico)                    |
+| `herramientas-de-concreto` | ❌ No                   | "Una amplia gama de herramientas para concreto..." (genérico)  |
 
 Un usuario que llegue directamente a una página de categoría (ej. desde Google) no tendría contexto inmediato de que esos productos son de Beton Trowel, a menos que vea el logo en el header. Las descripciones de "compactacion" y "herramientas" son particularmente genéricas y podrían pertenecer a cualquier marca.
 
 **Recomendación:** Agregar una línea inicial en cada hero description que posicione la marca:
+
 ```
 compactacion: "Beton Trowel ofrece compactadores de placas BT, reconocidos como el estándar..."
 vibracion: "Los vibradores de concreto Beton Trowel eliminan burbujas de aire..."
@@ -320,12 +335,14 @@ herramientas: "Beton Trowel presenta una amplia gama de herramientas para concre
 Este es uno de los momentos de mayor intención de conversión en el sitio. El mensaje genérico no refuerza la marca en el momento clave. El usuario podría estar en cualquier sitio de maquinaria.
 
 **Recomendación:** Agregar marca al mensaje:
+
 ```tsx
 <h2>¿Listo para mejorar tu obra con Beton Trowel?</h2>
 <p>Obtén una cotización personalizada para venta o renta de equipo Beton Trowel. Equipos y Superficies de México, tu distribuidor autorizado.</p>
 ```
 
 O, más sutil:
+
 ```tsx
 <h2>¿Listo para mejorar tu obra?</h2>
 <p>Cotiza equipos Beton Trowel — venta o renta — con Equipos y Superficies de México.</p>
@@ -338,6 +355,7 @@ O, más sutil:
 **Problema:** En todo el sitio no existe un badge, sello o indicador visual que certifique que Equipos y Superficies de México es un **Distribuidor Oficial** o **Representante Autorizado** de Beton Trowel. Esto es una oportunidad perdida de generar confianza instantánea.
 
 Actualmente, la relación se comunica únicamente mediante:
+
 - La presencia de ambos logos en Header/Footer (implícito)
 - El texto "Servicio con Equipos y superficies de México" en contacto
 - El JSON-LD (invisible para el usuario)
@@ -345,6 +363,7 @@ Actualmente, la relación se comunica únicamente mediante:
 No hay un elemento visual explícito que diga "Distribuidor Oficial".
 
 **Recomendación:** Agregar un badge sutil en el Hero o en el Footer:
+
 ```
 ┌──────────────────────┐
 │  Distribuidor Oficial │
@@ -370,55 +389,56 @@ Debe ser discreto (borde delgado, tipografía pequeña, sin colores que compitan
 Si bien Beton Trowel debe ser protagonista, el usuario que visita el sitio necesita entender que quien le vende, le da soporte y le entrega el equipo es **Equipos y Superficies de México**. La sección About no aclara esta relación, lo que puede generar confusión sobre con quién se está haciendo negocio.
 
 Los 4 bullets de beneficios son genéricos y no mencionan al distribuidor:
+
 - "Maquinaria de última generación"
 - "Soporte técnico especializado"
 - "Opciones de venta y renta flexibles"
 - "Distribución en todo el territorio nacional"
 
 **Recomendación:** Reformular el párrafo para que aclare la relación:
+
 ```
-"En Beton Trowel, nos dedicamos a proveer las herramientas más robustas. 
-En México, somos representados por Equipos y Superficies de México, 
+"En Beton Trowel, nos dedicamos a proveer las herramientas más robustas.
+En México, somos representados por Equipos y Superficies de México,
 quienes garantizan soporte local, venta y renta en todo el territorio nacional."
 ```
 
 O, si se prefiere mantener la voz de Beton Trowel, agregar una línea al final:
+
 ```
 "Distribuido en México por Equipos y Superficies de México."
 ```
 
 ---
 
-
-
 ## 4. Hallazgos específicos por página/componente
 
-| Página/Componente | Hallazgo | Criticidad |
-|---|---|---|
-| `HeroAction.tsx` (Hero principal) | Error: "Monterrey NL Y SLP" mayúscula incorrecta. Contradicción entre sede en Bélgica/Monterrey. "Hormigón" vs "concreto". Botón deshabilitado. | **ALTA** |
-| `HeroAction.tsx` | "Bienvenido a Beton Trowel BV" — usar "BV" en México no suma valor | MEDIA |
-| `HeroAction.tsx` | "Envío global" no es relevante para un distribuidor mexicano | MEDIA |
-| `Footer.tsx` | "Telefono" sin acento (2 ocurrencias, líneas 77-78) | BAJA |
-| `Equipos.tsx` | Uso de "su inversión" (formal) vs otras secciones informales. Inconsistencia de tono. | BAJA |
-| `acabado-de-concreto/page.tsx` | Meta description correcta con mención al distribuidor ✅ | — |
-| `herramientas-de-concreto/page.tsx` | Meta description sin mención al distribuidor | MEDIA |
-| `compactacion/page.tsx` | Meta description sin mención al distribuidor | MEDIA |
-| `vibracion/page.tsx` | Meta description sin mención al distribuidor | MEDIA |
-| `contacto/page.tsx` | Sin metadata personalizada (hereda layout raíz) | BAJA |
-| `layout.tsx` | Metadata raíz sin Open Graph/Twitter Cards | BAJA |
-| `avisoPrivacidad/page.tsx` | Contenido correcto y profesional. Bien estructurado. | ✅ |
-| `Header.tsx` | Jerarquía de logos correcta. Responsive bien implementado. | ✅ |
-| `ProductDetailLayout.tsx` | Excelente. Producto es protagonista. Ref correcta. | ✅ |
-| Páginas `[ref]/page.tsx` | `generateMetadata` correcto con nombre del producto + Beton Trowel México | ✅ |
-| `Card.tsx` | Simple, funcional. Buena tarjeta de producto. | ✅ |
-| `Equipos.tsx` (L45) | "BETON TROWEL" en ALL CAPS dentro de párrafo. Inconsistente con el resto del sitio. | ALTA |
-| `acabado-de-concreto/page.tsx` (L39) | "BETON TROWEL" en ALL CAPS dentro de párrafo. Mismo problema. | ALTA |
-| `compactacion/page.tsx` | Hero description genérica, no menciona Beton Trowel ni al distribuidor | ALTA |
-| `vibracion/page.tsx` | Hero description genérica, no menciona Beton Trowel ni al distribuidor | ALTA |
-| `herramientas-de-concreto/page.tsx` | Hero description genérica, no menciona Beton Trowel ni al distribuidor | ALTA |
-| `Cotizacion.tsx` | Sección CTA sin mención de ninguna marca. Oportunidad perdida. | MEDIA |
-| Global | No existe sello "Distribuidor Oficial" en ninguna parte del sitio | MEDIA |
-| `About.tsx` | No menciona a Equipos y Superficies de México. Solo habla como Beton Trowel. | MEDIA |
+| Página/Componente                    | Hallazgo                                                                                                                                        | Criticidad |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `HeroAction.tsx` (Hero principal)    | Error: "Monterrey NL Y SLP" mayúscula incorrecta. Contradicción entre sede en Bélgica/Monterrey. "concreto" vs "concreto". Botón deshabilitado. | **ALTA**   |
+| `HeroAction.tsx`                     | "Bienvenido a Beton Trowel BV" — usar "BV" en México no suma valor                                                                              | MEDIA      |
+| `HeroAction.tsx`                     | "Envío global" no es relevante para un distribuidor mexicano                                                                                    | MEDIA      |
+| `Footer.tsx`                         | "Telefono" sin acento (2 ocurrencias, líneas 77-78)                                                                                             | BAJA       |
+| `Equipos.tsx`                        | Uso de "su inversión" (formal) vs otras secciones informales. Inconsistencia de tono.                                                           | BAJA       |
+| `acabado-de-concreto/page.tsx`       | Meta description correcta con mención al distribuidor ✅                                                                                        | —          |
+| `herramientas-de-concreto/page.tsx`  | Meta description sin mención al distribuidor                                                                                                    | MEDIA      |
+| `compactacion/page.tsx`              | Meta description sin mención al distribuidor                                                                                                    | MEDIA      |
+| `vibracion/page.tsx`                 | Meta description sin mención al distribuidor                                                                                                    | MEDIA      |
+| `contacto/page.tsx`                  | Sin metadata personalizada (hereda layout raíz)                                                                                                 | BAJA       |
+| `layout.tsx`                         | Metadata raíz sin Open Graph/Twitter Cards                                                                                                      | BAJA       |
+| `avisoPrivacidad/page.tsx`           | Contenido correcto y profesional. Bien estructurado.                                                                                            | ✅         |
+| `Header.tsx`                         | Jerarquía de logos correcta. Responsive bien implementado.                                                                                      | ✅         |
+| `ProductDetailLayout.tsx`            | Excelente. Producto es protagonista. Ref correcta.                                                                                              | ✅         |
+| Páginas `[ref]/page.tsx`             | `generateMetadata` correcto con nombre del producto + Beton Trowel México                                                                       | ✅         |
+| `Card.tsx`                           | Simple, funcional. Buena tarjeta de producto.                                                                                                   | ✅         |
+| `Equipos.tsx` (L45)                  | "BETON TROWEL" en ALL CAPS dentro de párrafo. Inconsistente con el resto del sitio.                                                             | ALTA       |
+| `acabado-de-concreto/page.tsx` (L39) | "BETON TROWEL" en ALL CAPS dentro de párrafo. Mismo problema.                                                                                   | ALTA       |
+| `compactacion/page.tsx`              | Hero description genérica, no menciona Beton Trowel ni al distribuidor                                                                          | ALTA       |
+| `vibracion/page.tsx`                 | Hero description genérica, no menciona Beton Trowel ni al distribuidor                                                                          | ALTA       |
+| `herramientas-de-concreto/page.tsx`  | Hero description genérica, no menciona Beton Trowel ni al distribuidor                                                                          | ALTA       |
+| `Cotizacion.tsx`                     | Sección CTA sin mención de ninguna marca. Oportunidad perdida.                                                                                  | MEDIA      |
+| Global                               | No existe sello "Distribuidor Oficial" en ninguna parte del sitio                                                                               | MEDIA      |
+| `About.tsx`                          | No menciona a Equipos y Superficies de México. Solo habla como Beton Trowel.                                                                    | MEDIA      |
 
 ---
 
@@ -430,7 +450,7 @@ O, si se prefiere mantener la voz de Beton Trowel, agregar una línea al final:
    - Cambiar línea 71 de `"con sede en Monterrey NL Y SLP."` a `"Distribuido en Monterrey, NL y SLP."`
    - Unificar el mensaje: Beton Trowel es belga, Equipos y Superficies tiene presencia en México.
 
-2. **`HeroAction.tsx`: Reemplazar "hormigón" por "concreto"** (línea 76)
+2. **`HeroAction.tsx`: Reemplazar "concreto" por "concreto"** (línea 76)
    - En México el término correcto y legal es "concreto".
 
 3. **`HeroAction.tsx`: Eliminar el botón "Ver Catálogo" deshabilitado** (líneas 7-36)
@@ -457,7 +477,7 @@ O, si se prefiere mantener la voz de Beton Trowel, agregar una línea al final:
 ### 🔴 Críticas (nuevos hallazgos)
 
 9. **`Equipos.tsx` y `acabado-de-concreto/page.tsx`: Cambiar "BETON TROWEL" a "Beton Trowel"** en texto corrido
-    - El ALL CAPS en párrafos es inconsistente con el resto del sitio y se percibe como gritar.
+   - El ALL CAPS en párrafos es inconsistente con el resto del sitio y se percibe como gritar.
 
 10. **Tres páginas de categoría necesitan menciones de marca en su hero**
     - Archivos: `compactacion/page.tsx`, `vibracion/page.tsx`, `herramientas-de-concreto/page.tsx`
@@ -488,14 +508,14 @@ O, si se prefiere mantener la voz de Beton Trowel, agregar una línea al final:
 
 ## 6. Resumen de cumplimiento por objetivo de marca
 
-| Objetivo | Estado | Evidencia |
-|---|---|---|---|
-| Beton Trowel es el protagonista | ✅ Cumple | Hero, headers, páginas de producto, metadatos |
+| Objetivo                                | Estado              | Evidencia                                                                                                                                                     |
+| --------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beton Trowel es el protagonista         | ✅ Cumple           | Hero, headers, páginas de producto, metadatos                                                                                                                 |
 | Equipos y Superficies comunica respaldo | ⚠️ Requiere mejoras | Header/Footer/Contacto bien. Falta: no hay sello "Distribuidor Oficial", About.tsx no lo menciona, Cotización no lo incluye, 3/4 categorías no tienen mención |
-| Identidad visual consistente | ✅ Cumple | Tokens de color unificados, tipografía consistente |
-| Tono profesional | ⚠️ Requiere ajustes | Errores ortográficos ("Telefono", "hormigón"), ALL CAPS en párrafos, inconsistencia tú/usted |
-| Sin mensajes contradictorios | ⚠️ Requiere ajustes | Hero contradice ubicación geográfica (Bélgica vs Monterrey). About habla solo como Beton Trowel sin aclarar rol del distribuidor |
-| La experiencia fortalece ambas marcas | ⚠️ Requiere mejoras | Bien estructurado, pero se pierden oportunidades clave en categorías, CTA y About |
+| Identidad visual consistente            | ✅ Cumple           | Tokens de color unificados, tipografía consistente                                                                                                            |
+| Tono profesional                        | ⚠️ Requiere ajustes | Errores ortográficos ("Telefono", "concreto"), ALL CAPS en párrafos, inconsistencia tú/usted                                                                  |
+| Sin mensajes contradictorios            | ⚠️ Requiere ajustes | Hero contradice ubicación geográfica (Bélgica vs Monterrey). About habla solo como Beton Trowel sin aclarar rol del distribuidor                              |
+| La experiencia fortalece ambas marcas   | ⚠️ Requiere mejoras | Bien estructurado, pero se pierden oportunidades clave en categorías, CTA y About                                                                             |
 
 ---
 
@@ -504,6 +524,7 @@ O, si se prefiere mantener la voz de Beton Trowel, agregar una línea al final:
 **APRUEBA CON OBSERVACIONES — Se requieren correcciones antes de considerar la comunicación de marca como completamente sólida.**
 
 La comunicación de marca tiene bases correctas:
+
 - ✅ Beton Trowel es el protagonista visual y textual
 - ✅ Equipos y Superficies de México aparece como respaldo y distribuidor
 - ✅ La identidad visual es consistente entre páginas
@@ -511,12 +532,14 @@ La comunicación de marca tiene bases correctas:
 - ✅ JSON-LD refleja correctamente la relación entre marcas
 
 Sin embargo, se requieren correcciones **altas** en el Hero principal (archivo `HeroAction.tsx`), que contiene:
+
 - Una contradicción geográfica entre Bélgica y Monterrey
-- El término "hormigón" (español europeo) en lugar de "concreto" (español mexicano)
+- El término "concreto" (español europeo) en lugar de "concreto" (español mexicano)
 - Un botón deshabilitado que resta profesionalismo
 - Errores de formato ("Y" mayúscula)
 
 Además, se identificaron **nuevos hallazgos críticos**:
+
 - **"BETON TROWEL" en ALL CAPS** en dos secciones del sitio (Equipos.tsx y acabado-de-concreto), inconsistente con el manual de marca
 - **3 de 4 páginas de categoría** no mencionan a Beton Trowel en absoluto en sus descripciones de hero
 - **La sección Cotización** omite cualquier referencia de marca en el momento de mayor intención de conversión

@@ -42,7 +42,7 @@ export default function Equipos() {
                                 Equipos de Acabado y Compactación de concreto
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                Beton Trowel se complace en presentarle nuestra amplia gama de equipos.
+                                Equipos y superficies de México se complace en presentarle nuestra amplia gama de equipos.
                                 No comprometemos la calidad: utilizamos materiales de alta gama combinados con piezas
                                 de ingeniería de precisión para garantizar que su inversión brinde una vida útil sin problemas.
                             </p>

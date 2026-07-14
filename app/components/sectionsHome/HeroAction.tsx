@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import portadaAcabado from "@/public/Acabados/PortadaAcabados.jpeg";
+import { Bold } from "lucide-react";
 
 const MAIN_IMG = portadaAcabado;
 
@@ -49,12 +50,12 @@ export default function HeroAction() {
                         {/* Título Principal con escala fluida para 2K/4K */}
                         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-5xl 2xl:text-6xl font-bold text-white tracking-tighter leading-[0.95] mb-8">
                             Beton Trowel México, <br />
-                            <span className="text-brand-blue">distribuido en Monterrey, NL y SLP.</span>
+                            <span className="text-brand-blue">distribuido en Monterrey, NL y San Luis Potosí.</span>
                         </h1>
 
                         {/* Descripción con ancho controlado */}
                         <p className="text-base sm:text-lg md:text-xl 2xl:text-2xl text-gray-400 max-w-xl 2xl:max-w-3xl font-light leading-relaxed mb-10">
-                            Bienvenido a Beton Trowel México, especialistas en equipos de compactación y acabado de concreto de alta calidad. Con sede en Bélgica, cerca de Amberes, ofrecemos productos confiables disponibles en todo México. Con un amplio soporte y una red mundial de distribuidores, somos su socio para equipos de primer nivel.
+                            Bienvenido a Beton Trowel MX, especialistas en equipos de compactación y acabado de concreto de alta calidad. Nuestro principal interés es proporcionar productos confiables y de alta calidad para cada uno de sus proyectos a través de nuestro principal distribuidor en México, <span className="text-brand-blue font-bold">Equipos y Superficies de México.</span> 
                         </p>
 
                         {/* Botones Adaptables */}

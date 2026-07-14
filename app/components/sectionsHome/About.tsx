@@ -30,7 +30,7 @@ export default function About() {
                                 Calidad que Construye el <span className="text-brand-blue">Futuro</span>
                             </h2>
                             <p className="text-gray-600 text-lg mb-6">
-                                En Beton Trowel, nos dedicamos a proveer las herramientas más robustas y eficientes del mercado.
+                                En Equipos y Superficies de México, nos dedicamos a proveer las herramientas más robustas y eficientes del mercado.
                                 Entendemos que la calidad del acabado define la durabilidad de una obra.
                             </p>
                             <ul className="space-y-4 mb-8">

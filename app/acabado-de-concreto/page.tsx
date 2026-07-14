@@ -5,13 +5,13 @@ import { maquinaAcabado } from "@/data/Productos";
 import portadaAcabado from "@/public/Acabados/PortadaAcabados.jpeg";
 
 export const metadata: Metadata = {
-  title: "Acabado de Concreto | Beton Trowel México",
+  title: "Acabado de Concreto | Equipos y Superficies de México",
   description:
-    "Allanadoras dobles y sencillas para acabado de concreto. Maquinaria ligera profesional de Beton Trowel, distribuida por Equipos y Superficies de México.",
+    "Allanadoras dobles y sencillas para acabado de concreto. Maquinaria ligera profesional de Equipos y Superficies de México distribuida por Equipos y Superficies de México.",
   openGraph: {
-    title: "Acabado de Concreto | Beton Trowel México",
+    title: "Acabado de Concreto | Equipos y Superficies de México",
     description:
-      "Allanadoras dobles y sencillas para acabado de concreto. Maquinaria ligera profesional de Beton Trowel en México.",
+      "Allanadoras dobles y sencillas para acabado de concreto. Maquinaria ligera profesional de Equipos y Superficies de México en México.",
     locale: "es_MX",
     type: "website",
   },
@@ -36,7 +36,7 @@ export default function AcabadoPage() {
             Acabado de <span className="text-brand-black">Concreto</span>
           </h1>
           <p className="text-md text-white max-w-2xl">
-            Beton Trowel, en conjunto con Equipos y Superficies de México,
+            Equipos y Superficies de México,
             presenta una amplia gama de equipos de compactación y acabado de
             concreto. No comprometemos la calidad, utilizando materiales de alta
             calidad combinados con piezas de ingeniería de precisión para
