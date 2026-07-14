@@ -1,8 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import ContactForm from "./ContactForm";
+import contactImg from "@/public/Equipos/OficinaMonterrey.jpeg";
 
-const CONTACT_HERO = "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop";
+export const metadata: Metadata = {
+  title: "Contacto | Beton Trowel México",
+  description:
+    "Cotizaciones y asesoría técnica en maquinaria ligera para construcción. Equipos y Superficies de México, distribuidor oficial Beton Trowel.",
+  openGraph: {
+    title: "Contacto | Beton Trowel México",
+    description:
+      "Cotizaciones y asesoría técnica en maquinaria ligera para construcción. Equipos y Superficies de México, distribuidor oficial Beton Trowel.",
+    locale: "es_MX",
+    type: "website",
+  },
+};
 
 export default function ContactPage() {
   const icons = [
@@ -21,7 +34,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-brand-black/80 via-brand-black/40 to-brand-black z-10"></div>
           <Image
-            src={CONTACT_HERO}
+            src={contactImg}
             alt="Beton Trowel Contact"
             fill
             className="object-cover opacity-60 grayscale-[40%]"
@@ -39,37 +52,37 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 lg:py-32 md:py-24 px-6">
+      <section className="py-16 lg:py-24 px-6">
         <div className="max-w-[2560px] mx-auto lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 md:gap-8 gap-16 xl:gap-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12">
 
             {/* Columna Izquierda: Info de Contacto */}
-            <div className="md:col-span-4 lg:col-span-5 space-y-12">
+            <div className="lg:col-span-5 space-y-8 lg:space-y-12">
               <div>
                 <h2 className="text-3xl sm:text-5xl font-bold tracking-tighter mb-6 uppercase">
                   Información <br /> de Contacto
                 </h2>
-                <p className="text-gray-500 font-light max-w-md leading-relaxed">
-                  ¿Necesitas una cotización formal o asesoría técnica sobre nuestros equipos belgas? Nuestro equipo de expertos está listo para responder.
+                <p className="text-gray-500 font-light leading-relaxed">
+                  ¿Necesita una cotización formal o asesoría técnica sobre nuestros equipos belgas? Nuestro equipo de expertos está listo para responder.
                 </p>
               </div>
 
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 {icons.map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-6 group">
-                    <div className="p-4 rounded-2xl bg-brand-grey text-brand-black group-hover:bg-brand-blue group-hover:text-white transition-all duration-500 shadow-sm">
+                  <div key={idx} className="flex items-center gap-3 sm:gap-4 lg:gap-5 group">
+                    <div className="p-2.5 sm:p-3 lg:p-4 rounded-2xl bg-brand-grey text-brand-black group-hover:bg-brand-blue group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
                       <item.icon size={24} strokeWidth={1.5} />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h3 className="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">{item.title}</h3>
-                      <p className="text-lg font-mono font-medium text-brand-black">{item.detail}</p>
+                      <p className="text-sm sm:text-base lg:text-lg font-mono font-medium text-brand-black break-words">{item.detail}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Elemento decorativo / Frase de marca */}
-              <div className="pt-12 border-t border-gray-100 hidden lg:block">
+              <div className="pt-10 lg:pt-12 border-t border-gray-100 hidden lg:block">
                 <p className="font-mono text-[10px] text-gray-300 uppercase tracking-[0.3em]">
                   Beton Trowel • Equipos y Superficies de México
                 </p>
@@ -77,7 +90,7 @@ export default function ContactPage() {
             </div>
 
             {/* Columna Derecha: Formulario Estilo Premium */}
-            <div className="md:col-span-6 lg:col-span-7">
+            <div className="lg:col-span-7">
               <ContactForm />
             </div>
 

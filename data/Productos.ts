@@ -4,56 +4,56 @@ export const maquinaAcabado: MachineAcabado[] = [
     {
         id: 0,
         category: "Maquinas para acabado de concreto",
-        name: "Allanadora Doble  36\"",
+        name: "Allanadora Doble Mod 900 (Doble 36\")",
         ref:"BT900HC",
         desc: "Cuenta con un Motor Honda 24.0hp,  8 Llanas de acabado de 6\"X14\", direccion mecanica, asiento ajustable, 2 luces, sistema de aspersión, Ancho de operacion 1.90mt",
         img: "/Acabados/BT900HHW2-300x225.jpeg",
-        usage: 'Perfecta para alisar y compactar superficies de concreto fresco, obteniendo un acabado profesional.',
+        usage: 'Perfecta para acabados de pisos en donde se requiere un alto nivel de planicidad. Un equipo como este se recomienda para proyectos  de áreas medianas o grandes como Naves industriales, centros comerciales, etc.',
         specs: [
             { label: 'Motor', value: 'Honda 24.0hp' },
             { label: 'LLanas', value: 'De Acabado 6"x14"' },
-            { label: 'Peso', value: '315 kg' },
+            { label: 'Peso', value: '290 kg' },
             { label: 'Operación', value: '1.90m' }
         ]
     },
     {
         id: 1,
         category: "Maquinas para acabado de concreto",
-        name: "Allanadora Doble  46\"",
-        ref: "BT120",
+        name: "Allanadora Doble 1200 (Doble 46\")",
+        ref: "BT120-2",//5/PFV35
         desc: "Cuenta con  Motor Vanguard 35.0hp,  10 Llanas de acabado de 6\"X18\", direccion mecanica, Ancho de operacion 2.50mt, Dimensiones ;  Largo 2.54 mt x ancho 1.27 mt x alto 1.360mt",
         img: "/Acabados/BT1200HH-300x225.jpeg",
-        usage: 'Perfecta para alisar y compactar superficies de concreto fresco, obteniendo un acabado profesional.',
+        usage: 'El equipo preferido por contratistas profesionales de piso Industrial, este equipo proporciona excelente relación potencia-peso, esta combinación ayuda al alcance de planicidad y el alcance de numeros F',
         specs: [
             { label: 'Motor', value: 'Vanguard 35.0hp' },
             { label: 'LLanas', value: 'de Acabado 6"x18"' },
-            { label: 'Peso', value: '45 kg' },
+            { label: 'Peso', value: '490 kg' },
             { label: 'Operación', value: '2.50m' }
         ]
     },
     {
         id: 2,
         category: "Maquinas para acabado de concreto",
-        name: "Allanadora Sencilla de 36\"",
+        name: "Allanadora Sencilla 36\"",
         ref: "BT90H160",
         desc: "Cuenta con un Motor Honda de 5.5hp, 4 llanas de acabado de 6\"x14\", diametro de operación 90cm, ",
         img: "/Acabados/AllandoraSencilla.jpeg",
-        usage: 'Perfecta para alisar y compactar superficies de concreto fresco, obteniendo un acabado profesional.',
+        usage: 'La allanadora sencilla, esta hecha para mejorar el acabado superficial del concreto fresco y reduce tiempos de trabajo, es ideal para áreas medianas o espacios reducidos; es un equipo esencial para lograr pisos lisos y uniformes en obras industriales, comerciales y residenciales.',
         specs: [
             { label: 'Motor', value: 'Honda 5.5hp' },
             { label: 'LLanas', value: 'de Acabado 6"x14"' },
-            { label: 'Peso', value: '45 kg' },
+            { label: 'Peso', value: '78 kg' },
             { label: 'Operacion', value: '90cm' }
         ]
     },
     {
         id: 3,
         category: "Maquinas para acabado de concreto",
-        name: "Allanadora sencilla  46\"",
+        name: "Allanadora sencilla 46\"",
         ref: "BT120H390",
         desc: "Cuenta con un Motor Honda  13.0hp, 4 llanas de acabado de  6\"x18\", diametro de operación 120cm, peso 113kg.",
         img: "/Acabados/AllandoraSencilla.jpeg",
-        usage: 'Perfecta para alisar y compactar superficies de concreto fresco, obteniendo un acabado profesional.',
+        usage: 'esta allanadora de 46\" esta hecha para mejorar el acabado superficial del concreto fresco y reduce tiempos de trabajo, es ideal para áreas medianas o espacios reducidos; es un equipo esencial para lograr pisos lisos y uniformes en obras industriales, comerciales y residenciales',
         specs: [
             { label: 'Motor', value: 'Honda 13.0hp' },
             { label: 'LLanas', value: 'de Acabado 6"x18"' },
@@ -100,7 +100,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Llana tipo fresno",
         ref: "BT350095",
         desc: "Flotadora Ligera  36\"90 X 20cm(SOLO FLOTADORA) ",
-        img: "/herramientas/Big-blue-complete-2048x2048.jpeg"
+        img: "/herramientas/Big-blue-complete-2048x2048.jpeg",
+        usage: 'Para acabado superficial de concreto fresco. Ideal para losas de tamaño mediano.',
+        specs: [
+            { label: 'Ancho', value: '90 cm' },
+            { label: 'Largo', value: '20 cm' },
+            { label: 'Material', value: 'Aluminio/Magnesio' },
+            { label: 'Tipo', value: 'Flotadora Ligera' }
+        ]
     },
     {
         id:1,
@@ -108,7 +115,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Flotadora de Canal",
         ref: "BT101034C",
         desc: "2.450m X 15cm Completa con cabezal, 3 extensiones de aluminio clip de 1.80m cada uno",
-        img: "/herramientas/Bullfloat-2048x2048.jpeg"
+        img: "/herramientas/Bullfloat-2048x2048.jpeg",
+        usage: 'Para nivelación inicial de concreto fresco en canales y losas de gran superficie.',
+        specs: [
+            { label: 'Longitud', value: '2.45 m' },
+            { label: 'Ancho', value: '15 cm' },
+            { label: 'Extensiones', value: '3 de 1.80 m' },
+            { label: 'Material', value: 'Aluminio' }
+        ]
     },
     {
         id:2,
@@ -116,7 +130,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Corrector Bumpcutter",
         ref: "BT101035C",
         desc: "3.0m , 2\" de alto x 4\" de ancho. Completo, incluye cabezal de balero para herramienta profesional, 3 extensiones de aluminio de 1.83m cada uno y tensores(outriggers) ",
-        img: "/herramientas/Check-Rod-2048x2048.jpeg"
+        img: "/herramientas/Check-Rod-2048x2048.jpeg",
+        usage: 'Para corrección y nivelación precisa de concreto fresco en losas de gran formato.',
+        specs: [
+            { label: 'Longitud', value: '3.0 m' },
+            { label: 'Alto', value: '2"' },
+            { label: 'Ancho', value: '4"' },
+            { label: 'Extensiones', value: '3 de 1.83 m' }
+        ]
     },
     {
         id:3,
@@ -124,7 +145,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Corrector Bumpcutter completo",
         ref: "BT101026C",
         desc: "3.0m, 4\" de alto x 2\" de ancho. Completo, incluye cabezal de balero para herramienta profesional, 3 extensiones de aluminio de 1.83m cada uno, y tensores(outriggers)",
-        img: "/herramientas/BTSPRAY06L10La-2048x2048.jpeg"
+        img: "/herramientas/BTSPRAY06L10La-2048x2048.jpeg",
+        usage: 'Para eliminar alabeos y crestas en concreto fresco. Ideal para losas de alto tráfico.',
+        specs: [
+            { label: 'Longitud', value: '3.0 m' },
+            { label: 'Alto', value: '4"' },
+            { label: 'Ancho', value: '2"' },
+            { label: 'Extensiones', value: '3 de 1.83 m' }
+        ]
     },
     {
         id:4,
@@ -132,7 +160,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Llana tipo fresno",
         ref: "BT790074",
         desc: "Fresno 1.20m X 12cm (solo llana)",
-        img: "/herramientas/Bullfloat-2048x2048.jpeg"
+        img: "/herramientas/Bullfloat-2048x2048.jpeg",
+        usage: 'Para acabado manual de superficies de concreto en áreas pequeñas y difíciles.',
+        specs: [
+            { label: 'Largo', value: '1.20 m' },
+            { label: 'Ancho', value: '12 cm' },
+            { label: 'Material', value: 'Magnesio' },
+            { label: 'Tipo', value: 'Llana Fresno' }
+        ]
     },
     {
         id:5,
@@ -140,7 +175,14 @@ export const herramientasConcreto: HerramientasConcreto[] = [
         name: "Flota Manual",
         ref: "CT131",
         desc: "Flota Manual de Magnesio 20\" x 3-1/4\" Mango Plastico",
-        img: "/herramientas/master-square-end-trowel-bleu-300x293.jpeg"
+        img: "/herramientas/master-square-end-trowel-bleu-300x293.jpeg",
+        usage: 'Para acabado manual fino de concreto. Ideal para detalles y esquinas.',
+        specs: [
+            { label: 'Largo', value: '20"' },
+            { label: 'Ancho', value: '3-1/4"' },
+            { label: 'Material', value: 'Magnesio' },
+            { label: 'Mango', value: 'Plástico' }
+        ]
     }
 ];
 

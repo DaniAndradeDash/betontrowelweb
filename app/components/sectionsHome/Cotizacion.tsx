@@ -2,13 +2,13 @@ import Link from "next/link"
 
 export default function Cotizacion() {
     return (
-        <section className="py-20 bg-white">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-16 lg:py-20 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div className="bg-brand-blue rounded-3xl p-12 text-white shadow-2xl relative overflow-hidden">
                     <div className="relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">¿Listo para mejorar tu obra?</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6">¿Listo para mejorar su obra con Beton Trowel?</h2>
                         <p className="text-xl mb-8 opacity-90">
-                            Obtén una cotización personalizada para venta o renta de equipo hoy mismo.
+                            Cotice equipos Beton Trowel — venta o renta — con Equipos y Superficies de México, su distribuidor autorizado.
                         </p>
                         <Link
                             href="/contacto"

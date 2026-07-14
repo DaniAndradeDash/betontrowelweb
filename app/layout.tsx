@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +18,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Beton Trowel | Maquinaria Ligera para Construcción",
   description: "Venta y renta de maquinaria ligera y herramienta de acabado para la construcción en México.",
+  openGraph: {
+    title: "Beton Trowel | Maquinaria Ligera para Construcción",
+    description: "Venta y renta de maquinaria ligera y herramienta de acabado para la construcción en México.",
+    locale: "es_MX",
+    type: "website",
+    siteName: "Beton Trowel México",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Beton Trowel | Maquinaria Ligera para Construcción",
+    description: "Venta y renta de maquinaria ligera y herramienta de acabado para la construcción en México.",
+  },
 };
 
 const organizationJsonLd = {
@@ -95,6 +108,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content" className="flex-grow">{children}</main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

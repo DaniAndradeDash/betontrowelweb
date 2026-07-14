@@ -17,7 +17,7 @@ const AvisoPrivacidad = () => {
             </div>
 
             {/* Contenedor Principal del Documento Legal */}
-            <article className="max-w-4xl mx-auto bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden">
+            <article className="max-w-4xl mx-auto bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
                 
                 {/* Encabezado del Documento */}
                 <div className="bg-brand-black p-8 sm:p-12 text-white relative overflow-hidden">
@@ -123,7 +123,7 @@ const AvisoPrivacidad = () => {
                     {/* Bloque de Contacto */}
                     <footer className="bg-brand-black rounded-2xl p-6 sm:p-8 text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
                         <div className="space-y-1">
-                            <h3 className="text-sm font-bold tracking-tight">¿Tienes dudas sobre tus datos?</h3>
+                            <h3 className="text-sm font-bold tracking-tight">¿Tiene dudas sobre sus datos?</h3>
                             <p className="text-xs text-gray-400 font-light">Ponte en contacto directo con nuestra área de privacidad.</p>
                         </div>
                         <a 
